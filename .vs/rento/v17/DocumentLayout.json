@@ -1,12 +1,137 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Mousab\\source\\repos\\rento\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|c:\\users\\mousab\\source\\repos\\rento\\migrations\\20250628221209_f00.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|solutionrelative:migrations\\20250628221209_f00.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|c:\\users\\mousab\\source\\repos\\rento\\entities\\branchworkinghour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|solutionrelative:entities\\branchworkinghour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|c:\\users\\mousab\\source\\repos\\rento\\controllers\\branchs\\branchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|solutionrelative:controllers\\branchs\\branchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|c:\\users\\mousab\\source\\repos\\rento\\controllers\\branchworkinghours\\branchworkinghourscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|solutionrelative:controllers\\branchworkinghours\\branchworkinghourscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|c:\\users\\mousab\\source\\repos\\rento\\rentpmappings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|solutionrelative:rentpmappings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|c:\\users\\mousab\\source\\repos\\rento\\entities\\branch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|solutionrelative:entities\\branch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|c:\\users\\mousab\\source\\repos\\rento\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20250628221209_F00.cs",
+              "DocumentMoniker": "C:\\Users\\Mousab\\source\\repos\\rento\\Migrations\\20250628221209_F00.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250628221209_F00.cs",
+              "ToolTip": "C:\\Users\\Mousab\\source\\repos\\rento\\Migrations\\20250628221209_F00.cs",
+              "RelativeToolTip": "Migrations\\20250628221209_F00.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T22:12:10.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BranchController.cs",
+              "DocumentMoniker": "C:\\Users\\Mousab\\source\\repos\\rento\\Controllers\\Branchs\\BranchController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Branchs\\BranchController.cs",
+              "ToolTip": "C:\\Users\\Mousab\\source\\repos\\rento\\Controllers\\Branchs\\BranchController.cs",
+              "RelativeToolTip": "Controllers\\Branchs\\BranchController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwAUAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T19:28:23.99Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BranchWorkingHour.cs",
+              "DocumentMoniker": "C:\\Users\\Mousab\\source\\repos\\rento\\Entities\\BranchWorkingHour.cs",
+              "RelativeDocumentMoniker": "Entities\\BranchWorkingHour.cs",
+              "ToolTip": "C:\\Users\\Mousab\\source\\repos\\rento\\Entities\\BranchWorkingHour.cs",
+              "RelativeToolTip": "Entities\\BranchWorkingHour.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA2wBAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T19:28:00.255Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Branch.cs",
+              "DocumentMoniker": "C:\\Users\\Mousab\\source\\repos\\rento\\Entities\\Branch.cs",
+              "RelativeDocumentMoniker": "Entities\\Branch.cs",
+              "ToolTip": "C:\\Users\\Mousab\\source\\repos\\rento\\Entities\\Branch.cs",
+              "RelativeToolTip": "Entities\\Branch.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T19:27:57.526Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BranchWorkingHoursController.cs",
+              "DocumentMoniker": "C:\\Users\\Mousab\\source\\repos\\rento\\Controllers\\BranchWorkingHours\\BranchWorkingHoursController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BranchWorkingHours\\BranchWorkingHoursController.cs",
+              "ToolTip": "C:\\Users\\Mousab\\source\\repos\\rento\\Controllers\\BranchWorkingHours\\BranchWorkingHoursController.cs",
+              "RelativeToolTip": "Controllers\\BranchWorkingHours\\BranchWorkingHoursController.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAcwB4AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T19:26:11.055Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RentpMappings.cs",
+              "DocumentMoniker": "C:\\Users\\Mousab\\source\\repos\\rento\\RentpMappings.cs",
+              "RelativeDocumentMoniker": "RentpMappings.cs",
+              "ToolTip": "C:\\Users\\Mousab\\source\\repos\\rento\\RentpMappings.cs",
+              "RelativeToolTip": "RentpMappings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T04:05:32.387Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Mousab\\source\\repos\\rento\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Mousab\\source\\repos\\rento\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAcAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T12:11:23.557Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
