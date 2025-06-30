@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Rento.Entities;
-using Rento.Entities.ValueObjects;
 
 namespace Rento.Infrastructure.Implemenation.Db
 {
@@ -8,7 +7,11 @@ namespace Rento.Infrastructure.Implemenation.Db
     {
         public virtual DbSet<Branch> Branchs { get; set; }
         public virtual DbSet<BranchWorkingHour> BranchWorkingHours { get; set; }
-
+        public virtual DbSet<VehicleCategorie> VehicleCategories { get; set; }
+        public virtual DbSet<Vehicle> Vehicles { get; set; }
+        public virtual DbSet<VehicleModel> VehicleModels { get; set; }
+        public virtual DbSet<VehicleManufacturer> VehicleManufacturers { get; set; }
+       
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(
@@ -30,11 +33,26 @@ namespace Rento.Infrastructure.Implemenation.Db
                         {
                             WorkingHourIntervalBuilder.ToJson();
                         });
-                        
- 
 
+            modelBuilder.Entity<Branch>()
+                        .HasMany<Vehicle>()
+                        .WithOne()
+                        .HasForeignKey(v => v.BranchId);
 
+            modelBuilder.Entity<Vehicle>()
+                        .HasOne<VehicleManufacturer>()
+                        .WithOne()
+                        .HasForeignKey<Vehicle>(v => v.VehicleManufacturerId);
 
+            modelBuilder.Entity<Vehicle>()
+                        .HasOne<VehicleModel>()
+                        .WithOne()
+                        .HasForeignKey<Vehicle>(v => v.VehicleModelId);
+
+            modelBuilder.Entity<VehicleCategorie>()
+                        .HasMany<VehicleModel>()
+                        .WithOne()
+                        .HasForeignKey(vm => vm.VehicleCategorieId);
 
             modelBuilder.Entity<Branch>() 
                 .Property(r => r.CoordinatesLatitude).HasPrecision(15, 15);

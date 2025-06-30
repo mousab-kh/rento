@@ -55,8 +55,8 @@ namespace Rento.Entities
 
         private void SetDuration(DateTime start, DateTime end)
         {
-            //if (start >= end)
-            //    throw new Exception("Invalid dates");
+            if (start >= end)
+                throw new Exception("Invalid dates");
 
             StartTime = start;
             EndTime = end;

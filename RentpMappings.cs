@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Rento.Controllers.Branchs.Dto;
 using Rento.Controllers.BranchWorkingHours.Dto;
+using Rento.Controllers.Vehicle.Dto;
 using Rento.Entities;
 using Rento.Entities.ValueObjects;
 
@@ -16,6 +17,9 @@ namespace Rento
             CreateMap<BranchWorkingHour, GetBranchWorkingHourOutputDto>();
             CreateMap<WorkingHourIntervalValueObject, WorkingHourIntervalDto>();
             CreateMap<WorkingHourIntervalDto,WorkingHourIntervalValueObject> ();
+
+            CreateMap<GetVehicleDto, Vehicle>();
+
         }
     }
 }
