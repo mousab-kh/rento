@@ -1,15 +1,23 @@
-﻿using Rento.Entities.internalenum;
+﻿using Rento.Entities.Enums;
+using System.ComponentModel.DataAnnotations;
 
-namespace Rento.Controllers.Vehicle.Dto
+namespace Rento.Controllers.Vehicles.Dto
 {
     public class GetVehicleDto
     {
+        [Range(1, int.MaxValue)]
         public int Id { get; set; }
+        [Range(1, int.MaxValue)]
         public int VehicleModelId { get; set; }
+        [Range(1, int.MaxValue)]
         public int Year { get; set; }
+        [Range(1, int.MaxValue)]
         public int VehicleManufacturerId { get; set; }
+        [Required]
         public required string LicensePlateNumber { get; set; }
+        [EnumDataType(typeof(FuelType))]
         public FuelType FuelTypes { get; set; }
+        [Range(1, int.MaxValue)]
         public int BranchId { get; set; }
     }
 }

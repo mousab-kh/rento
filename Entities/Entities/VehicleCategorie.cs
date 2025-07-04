@@ -1,4 +1,6 @@
-﻿namespace Rento.Entities
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace Rento.Entities.Entities
 {
     public class VehicleCategorie
     {
@@ -6,6 +8,7 @@
         public required string Name { get; set; }
         public bool IsActive { get; set; }
 
+        [SetsRequiredMembers]
         public VehicleCategorie(string name)
         {
             SetCategorieName(name);

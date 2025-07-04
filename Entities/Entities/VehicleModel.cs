@@ -1,4 +1,6 @@
-﻿namespace Rento.Entities
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace Rento.Entities.Entities
 {
     public class VehicleModel
     {
@@ -7,6 +9,7 @@
         public bool IsActive { get; set; }
         public int VehicleCategorieId { get; set; }
 
+        [SetsRequiredMembers]
         public VehicleModel(string name, int vehicleCategorieId)
         {
             SetModelName(name);

@@ -1,27 +1,32 @@
-using AutoMapper;
-using Microsoft.OpenApi.Models;
-using Rento.Entities;
+﻿using Microsoft.OpenApi.Models;
 using Rento.Infrastructure.Implemenation.Db;
 using Rento.Infrastructure.Implemenation.Repository;
 using Rento.Infrastructure.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Logging.ClearProviders();                  // Optional: remove default providers
+builder.Logging.AddConsole();
+builder.Logging.AddDebug();                        // Logs to Debug window (for Visual Studio)
+builder.Logging.SetMinimumLevel(LogLevel.Debug);   // Set minimum log leve
+
 // Add services to the container.
 
 builder.Services.AddControllers();
 builder.Services.AddDbContext<RentoDbContext>();
-builder.Services.AddScoped<IRepository<Branch>,BranchRepository>();
-builder.Services.AddScoped<IRepository<BranchWorkingHour>, BranchWorkingHoursRepository>();
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-builder.Services.AddMvc();
+
 
 builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new OpenApiInfo { Title = "Your API", Version = "v1" });
+    options.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
 });
 
 var app = builder.Build();
+
+    
 
 app.UseSwagger();
 app.UseSwaggerUI(options =>
@@ -31,6 +36,7 @@ app.UseSwaggerUI(options =>
 });
 
 // Configure the HTTP request pipeline.
+app.UseDeveloperExceptionPage();
 
 app.UseHttpsRedirection();
 

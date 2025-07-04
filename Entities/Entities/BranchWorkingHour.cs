@@ -1,7 +1,7 @@
 ﻿using Rento.Entities.ValueObjects;
 using System.ComponentModel.DataAnnotations;
 
-namespace Rento.Entities
+namespace Rento.Entities.Entities
 {
     public class BranchWorkingHour
     {

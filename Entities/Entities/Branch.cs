@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Diagnostics.CodeAnalysis;
 
-namespace Rento.Entities
+namespace Rento.Entities.Entities
 {
 
     public class Branch
@@ -16,15 +16,11 @@ namespace Rento.Entities
             CoordinatesLatitude = coordinatesLatitude;
             CoordinatesLongitude = coordinatesLongitude;
             IsActive = isActive;
-            
-
         }
 
         private Branch ()
         {
         }
-
-     
 
 
         [Key]

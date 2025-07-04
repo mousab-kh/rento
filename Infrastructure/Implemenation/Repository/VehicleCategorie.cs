@@ -1,9 +1,9 @@
-﻿using Rento.Entities;
+﻿using Rento.Entities.Entities;
 using Rento.Infrastructure.Implemenation.Db;
 
 namespace Rento.Infrastructure.Implemenation.Repository
 {
-    public class VehicleCategorie : RentoRepository<Entities.VehicleModel>
+    public class VehicleCategorie : Repository<VehicleModel>
     {
         public VehicleCategorie(RentoDbContext context) : base(context)
         {

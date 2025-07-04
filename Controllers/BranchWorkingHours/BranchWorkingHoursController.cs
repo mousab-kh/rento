@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Rento.Controllers.BranchWorkingHours.Dto;
-using Rento.Entities;
+using Rento.Entities.Entities;
 using Rento.Entities.ValueObjects;
 using Rento.Infrastructure.Interfaces;
 using System.Threading.Tasks;

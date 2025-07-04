@@ -1,9 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata;
-using Rento.Entities.internalenum;
-using System.ComponentModel;
+﻿using Rento.Entities.Enums;
 using System.Diagnostics.CodeAnalysis;
 
-namespace Rento.Entities
+namespace Rento.Entities.Entities
 {
     public class Vehicle
     {
@@ -19,6 +17,7 @@ namespace Rento.Entities
         {
         }
 
+        [SetsRequiredMembers]
         public Vehicle(
             int vehicleModelId,
             int year,
@@ -35,6 +34,10 @@ namespace Rento.Entities
             SetBranch(branchId);
         }
 
+        public static void Update()
+        {
+        }
+
         private void SetVehicleManufacturer(int vehicleManufacturerId)
         {
             if (vehicleManufacturerId <= 0)
@@ -42,6 +45,7 @@ namespace Rento.Entities
 
             VehicleManufacturerId = vehicleManufacturerId;
         }
+
         private void SetBranch(int branchId)
         {
             if (branchId <= 0)
@@ -49,6 +53,7 @@ namespace Rento.Entities
 
             BranchId = branchId;
         }
+
         private void SetVehicleModelId(int vehicleModelId)
         {
             if (vehicleModelId <= 0)
@@ -59,19 +64,18 @@ namespace Rento.Entities
 
         private void SetFuelTypes(FuelType fuelTypes)
         {
-            if (Enum.IsDefined<FuelType>(fuelTypes) == false)
+            if (Enum.IsDefined(fuelTypes))
                 throw new Exception("Invalid Fuel Type");
-
             FuelTypes = fuelTypes;
         }
 
         private void SetYear(int year)
         {
-            if (year.ToString().Length != 4)
-                throw new Exception("Invalid year");
+            //if (year.ToString().Length != 4)
+            //    throw new Exception("Invalid year");
 
-            if (year < 1900)
-                throw new Exception("Invalid year");
+            //if (year < 1900)
+            //    throw new Exception("Invalid year");
 
             Year = year;
         }

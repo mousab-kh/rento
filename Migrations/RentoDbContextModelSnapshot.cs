@@ -22,7 +22,7 @@ namespace Rento.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Rento.Entities.Branch", b =>
+            modelBuilder.Entity("Rento.Entities.Entities.Branch", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -50,7 +50,7 @@ namespace Rento.Migrations
                     b.ToTable("Branchs");
                 });
 
-            modelBuilder.Entity("Rento.Entities.BranchWorkingHour", b =>
+            modelBuilder.Entity("Rento.Entities.Entities.BranchWorkingHour", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -77,7 +77,63 @@ namespace Rento.Migrations
                     b.ToTable("BranchWorkingHours");
                 });
 
-            modelBuilder.Entity("Rento.Entities.Vehicle", b =>
+            modelBuilder.Entity("Rento.Entities.Entities.RentalRate", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateOnly>("EndDate")
+                        .HasColumnType("date");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("RentalRateSchemasId")
+                        .HasColumnType("int");
+
+                    b.Property<DateOnly>("StartDate")
+                        .HasColumnType("date");
+
+                    b.Property<int>("VehicleCategorieId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("VehicleModelId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RentalRateSchemasId")
+                        .IsUnique();
+
+                    b.ToTable("RentalRates");
+                });
+
+            modelBuilder.Entity("Rento.Entities.Entities.RentalRateSchema", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateOnly>("DayRentFrom")
+                        .HasColumnType("date");
+
+                    b.Property<DateOnly>("DayRentTo")
+                        .HasColumnType("date");
+
+                    b.Property<int>("RentalName")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("RentalRateSchemas");
+                });
+
+            modelBuilder.Entity("Rento.Entities.Entities.Vehicle", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -117,7 +173,7 @@ namespace Rento.Migrations
                     b.ToTable("Vehicles");
                 });
 
-            modelBuilder.Entity("Rento.Entities.VehicleCategorie", b =>
+            modelBuilder.Entity("Rento.Entities.Entities.VehicleCategorie", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -137,7 +193,7 @@ namespace Rento.Migrations
                     b.ToTable("VehicleCategories");
                 });
 
-            modelBuilder.Entity("Rento.Entities.VehicleManufacturer", b =>
+            modelBuilder.Entity("Rento.Entities.Entities.VehicleManufacturer", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -157,7 +213,7 @@ namespace Rento.Migrations
                     b.ToTable("VehicleManufacturers");
                 });
 
-            modelBuilder.Entity("Rento.Entities.VehicleModel", b =>
+            modelBuilder.Entity("Rento.Entities.Entities.VehicleModel", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -182,9 +238,9 @@ namespace Rento.Migrations
                     b.ToTable("VehicleModels");
                 });
 
-            modelBuilder.Entity("Rento.Entities.BranchWorkingHour", b =>
+            modelBuilder.Entity("Rento.Entities.Entities.BranchWorkingHour", b =>
                 {
-                    b.HasOne("Rento.Entities.Branch", null)
+                    b.HasOne("Rento.Entities.Entities.Branch", null)
                         .WithMany()
                         .HasForeignKey("BranchId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -218,30 +274,39 @@ namespace Rento.Migrations
                     b.Navigation("Intervals");
                 });
 
-            modelBuilder.Entity("Rento.Entities.Vehicle", b =>
+            modelBuilder.Entity("Rento.Entities.Entities.RentalRate", b =>
                 {
-                    b.HasOne("Rento.Entities.Branch", null)
+                    b.HasOne("Rento.Entities.Entities.RentalRateSchema", null)
+                        .WithOne()
+                        .HasForeignKey("Rento.Entities.Entities.RentalRate", "RentalRateSchemasId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Rento.Entities.Entities.Vehicle", b =>
+                {
+                    b.HasOne("Rento.Entities.Entities.Branch", null)
                         .WithMany()
                         .HasForeignKey("BranchId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Rento.Entities.VehicleManufacturer", null)
+                    b.HasOne("Rento.Entities.Entities.VehicleManufacturer", null)
                         .WithOne()
-                        .HasForeignKey("Rento.Entities.Vehicle", "VehicleManufacturerId")
+                        .HasForeignKey("Rento.Entities.Entities.Vehicle", "VehicleManufacturerId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Rento.Entities.VehicleModel", null)
+                    b.HasOne("Rento.Entities.Entities.VehicleModel", null)
                         .WithOne()
-                        .HasForeignKey("Rento.Entities.Vehicle", "VehicleModelId")
+                        .HasForeignKey("Rento.Entities.Entities.Vehicle", "VehicleModelId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Rento.Entities.VehicleModel", b =>
+            modelBuilder.Entity("Rento.Entities.Entities.VehicleModel", b =>
                 {
-                    b.HasOne("Rento.Entities.VehicleCategorie", null)
+                    b.HasOne("Rento.Entities.Entities.VehicleCategorie", null)
                         .WithMany()
                         .HasForeignKey("VehicleCategorieId")
                         .OnDelete(DeleteBehavior.Cascade)

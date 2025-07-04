@@ -13,6 +13,7 @@
           "Microsoft.EntityFrameworkCore.Design": "9.0.6",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.6",
           "Microsoft.EntityFrameworkCore.Tools": "9.0.6",
+          "Microsoft.Extensions.Logging": "9.0.6",
           "Newtonsoft.Json": "13.0.3",
           "Swashbuckle.AspNetCore": "9.0.1"
         },

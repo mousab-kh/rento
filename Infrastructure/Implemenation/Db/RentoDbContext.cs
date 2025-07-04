@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Rento.Entities;
+using Rento.Entities.Entities;
 
 namespace Rento.Infrastructure.Implemenation.Db
 {
@@ -11,7 +11,8 @@ namespace Rento.Infrastructure.Implemenation.Db
         public virtual DbSet<Vehicle> Vehicles { get; set; }
         public virtual DbSet<VehicleModel> VehicleModels { get; set; }
         public virtual DbSet<VehicleManufacturer> VehicleManufacturers { get; set; }
-       
+        public virtual DbSet<RentalRateSchema> RentalRateSchemas { get; set; }
+        public virtual DbSet<RentalRate> RentalRates { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(
@@ -53,7 +54,10 @@ namespace Rento.Infrastructure.Implemenation.Db
                         .HasMany<VehicleModel>()
                         .WithOne()
                         .HasForeignKey(vm => vm.VehicleCategorieId);
-
+            modelBuilder.Entity<RentalRate>()
+                        .HasOne<RentalRateSchema>()
+                        .WithOne()
+                        .HasForeignKey<RentalRate>(i => i.RentalRateSchemasId);
             modelBuilder.Entity<Branch>() 
                 .Property(r => r.CoordinatesLatitude).HasPrecision(15, 15);
             modelBuilder.Entity<Branch>()

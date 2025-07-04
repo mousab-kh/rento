@@ -2,7 +2,7 @@ using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Rento.Controllers.Branchs.Dto;
-using Rento.Entities;
+using Rento.Entities.Entities;
 using Rento.Infrastructure.Interfaces;
 
 namespace Rento.Controllers.Branchs
@@ -17,30 +17,31 @@ namespace Rento.Controllers.Branchs
 
         public BranchController(IRepository<Branch> repository,IMapper mapper)
         {
-
             _branchrepository = repository;
             _mapper = mapper;
         }
 
         [HttpDelete]
-        public async Task DeleteBranch(int Id)
+        public async Task DeleteBranch(int id)
         {
-            if (Id<0) throw new Exception
+            if (id<0) throw new Exception
                     ("Invalid branch Id");
 
-            var branchtodelete = await _branchrepository.GetEntityAsync(Id);
+            var branchtodelete = await _branchrepository.GetEntityAsync(id);
             if (branchtodelete == null) 
                 throw new Exception("Invalid branch");
             
             _branchrepository.DeleteEntity(branchtodelete);
             _branchrepository.Save();
         }
+
         [HttpPut]
         public async Task UpdateBranch(UpdateBranchDto branchdto)
         {
             var branchenitity = await _branchrepository.GetEntityAsync(branchdto.Id);
             if (branchenitity == null) 
                 throw new Exception("Invalid Update branch");
+
             _branchrepository.Clear();
 
             var branchUpdate = _mapper.Map<Branch>(branchdto);
@@ -65,17 +66,16 @@ namespace Rento.Controllers.Branchs
         }
 
         [HttpGet("{Id}")]
-        public async Task<GetBranchDto> GetBranch(int Id)
+        public async Task<GetBranchDto> GetBranch(int id)
         {
-            if (Id < 0) throw new Exception
+            if (id < 0) throw new Exception
                      ("Invalid branch Id");
-            var branchrepository = await _branchrepository.GetEntityAsync(Id);
+            var branchrepository = await _branchrepository.GetEntityAsync(id);
             if (branchrepository == null) 
                 throw new Exception("Invalid branch/branch Id");
             return _mapper.Map<GetBranchDto>(branchrepository);
              
         }
-
 
         [HttpGet]
         public async Task<List<GetBranchDto>> GetAll()
@@ -87,8 +87,4 @@ namespace Rento.Controllers.Branchs
         }
 
     }
-
-    
-
-    
 }

@@ -1,4 +1,6 @@
-﻿namespace Rento.Entities
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace Rento.Entities.Entities
 {
     public class VehicleManufacturer
     {
@@ -6,10 +8,7 @@
         public required string Name { get; set; }
         public bool IsActive { get; set; }
 
-        private VehicleManufacturer()
-        {
-        }
-
+        [SetsRequiredMembers]
         public VehicleManufacturer(string name)
         {
             SetManufacturerName(name);

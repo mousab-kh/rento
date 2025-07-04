@@ -8,7 +8,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Id",
+        "Name": "id",
         "Type": "System.Int32",
         "IsRequired": false
       }
@@ -94,7 +94,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Id",
+        "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
       }
@@ -219,6 +219,678 @@
           "application/json",
           "text/json"
         ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Rento.Controllers.RentalRates.RentalRateController",
+    "Method": "CreateRentalRate",
+    "RelativePath": "RentalRate/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createRentalRateDto",
+        "Type": "Rento.Controllers.RentalRates.Dto.CreateRentalRateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Rento.Controllers.RentalRates.RentalRateController",
+    "Method": "DeleteRentalRate",
+    "RelativePath": "RentalRate/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Rento.Controllers.RentalRates.RentalRateController",
+    "Method": "GetRentalRate",
+    "RelativePath": "RentalRate/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Rento.Controllers.RentalRates.Dto.GetRentalRateDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Rento.Controllers.RentalRates.RentalRateController",
+    "Method": "GetAllRentalRates",
+    "RelativePath": "RentalRate/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Rento.Controllers.RentalRates.Dto.GetRentalRateDto, Rento, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Rento.Controllers.RentalRates.RentalRateController",
+    "Method": "UpdateRentalRate",
+    "RelativePath": "RentalRate/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateRentalRateDto",
+        "Type": "Rento.Controllers.RentalRates.Dto.UpdateRentalRateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Rento.Controllers.RentalRateSchemasController.RentalRateSchemaController",
+    "Method": "CreateRentalRateSchema",
+    "RelativePath": "RentalRateSchemas/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createRentalRateSchemaDto",
+        "Type": "Rento.Controllers.RentalRateSchemasController.Dto.CreateRentalRateSchemaDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Rento.Controllers.RentalRateSchemasController.RentalRateSchemaController",
+    "Method": "DeleteRentalRateSchema",
+    "RelativePath": "RentalRateSchemas/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Rento.Controllers.RentalRateSchemasController.RentalRateSchemaController",
+    "Method": "GetRentalRateSchema",
+    "RelativePath": "RentalRateSchemas/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Rento.Controllers.RentalRateSchemasController.Dto.GetRentalRateSchemaDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Rento.Controllers.RentalRateSchemasController.RentalRateSchemaController",
+    "Method": "GetAllRentalRateSchemas",
+    "RelativePath": "RentalRateSchemas/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Rento.Controllers.RentalRateSchemasController.Dto.GetRentalRateSchemaDto, Rento, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Rento.Controllers.RentalRateSchemasController.RentalRateSchemaController",
+    "Method": "UpdateRentalRateSchema",
+    "RelativePath": "RentalRateSchemas/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateRentalRateSchemaDto",
+        "Type": "Rento.Controllers.RentalRateSchemasController.Dto.UpdateRentalRateSchemaDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Rento.Controllers.Vehicles.VehicleController",
+    "Method": "CreateVehicle",
+    "RelativePath": "Vehicle/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "vehicleDto",
+        "Type": "Rento.Controllers.Vehicles.Dto.CreateVehicleDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Rento.Controllers.Vehicles.VehicleController",
+    "Method": "DeleteVehicle",
+    "RelativePath": "Vehicle/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Rento.Controllers.Vehicles.VehicleController",
+    "Method": "GetVehicle",
+    "RelativePath": "Vehicle/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Rento.Controllers.Vehicles.Dto.GetVehicleDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Rento.Controllers.Vehicles.VehicleController",
+    "Method": "GetAllVehicle",
+    "RelativePath": "Vehicle/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Rento.Controllers.Vehicles.Dto.GetVehicleDto, Rento, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Rento.Controllers.Vehicles.VehicleController",
+    "Method": "UpdateVehicle",
+    "RelativePath": "Vehicle/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateVehicle",
+        "Type": "Rento.Controllers.Vehicles.Dto.UpdateVehicleDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Rento.Controllers.VehicleCategories.VehicleCategorieController",
+    "Method": "CreateCategorie",
+    "RelativePath": "VehicleCategorie/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createVehicleCategorieDto",
+        "Type": "Rento.Controllers.VehicleCategories.Dto.CreateVehicleCategorieDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Rento.Controllers.VehicleCategories.VehicleCategorieController",
+    "Method": "DeleteCategorie",
+    "RelativePath": "VehicleCategorie/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Rento.Controllers.VehicleCategories.VehicleCategorieController",
+    "Method": "GetVehicleCategorie",
+    "RelativePath": "VehicleCategorie/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Rento.Controllers.VehicleCategories.Dto.GetVehicleCategorieDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Rento.Controllers.VehicleCategories.VehicleCategorieController",
+    "Method": "GetAllCategorie",
+    "RelativePath": "VehicleCategorie/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Rento.Controllers.VehicleCategories.Dto.GetVehicleCategorieDto, Rento, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Rento.Controllers.VehicleCategories.VehicleCategorieController",
+    "Method": "UpdateCategorie",
+    "RelativePath": "VehicleCategorie/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateVehicleCategorieDto",
+        "Type": "Rento.Controllers.VehicleCategories.Dto.UpdateVehicleCategorieDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Rento.Controllers.VehicleManufacturers.VehicleManufacturerController",
+    "Method": "CreateVehicleManufacturer",
+    "RelativePath": "VehicleManufacturer/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createVehicleManufacturerDto",
+        "Type": "Rento.Controllers.VehicleManufacturers.Dto.CreateVehicleManufacturerDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Rento.Controllers.VehicleManufacturers.VehicleManufacturerController",
+    "Method": "DeleteVehicleManufacturer",
+    "RelativePath": "VehicleManufacturer/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Rento.Controllers.VehicleManufacturers.VehicleManufacturerController",
+    "Method": "GetVehicleManufacturerAsync",
+    "RelativePath": "VehicleManufacturer/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Rento.Controllers.VehicleManufacturers.Dto.GetVehicleManufacturerDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Rento.Controllers.VehicleManufacturers.VehicleManufacturerController",
+    "Method": "GetAllVehicleManufacturerAsync",
+    "RelativePath": "VehicleManufacturer/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Rento.Controllers.VehicleManufacturers.Dto.GetVehicleManufacturerDto, Rento, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Rento.Controllers.VehicleManufacturers.VehicleManufacturerController",
+    "Method": "UpdateVehicleManufacturer",
+    "RelativePath": "VehicleManufacturer/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateVehicleManufacturerDto",
+        "Type": "Rento.Controllers.VehicleManufacturers.Dto.UpdateVehicleManufacturerDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Rento.Controllers.VehicleModels.VehicleModelController",
+    "Method": "CreateVehicleModel",
+    "RelativePath": "VehicleModel/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createVehicleModelDto",
+        "Type": "Rento.Controllers.VehicleModels.Dto.CreateVehicleModelDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Rento.Controllers.VehicleModels.VehicleModelController",
+    "Method": "DeleteVehicleMode",
+    "RelativePath": "VehicleModel/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Rento.Controllers.VehicleModels.VehicleModelController",
+    "Method": "GetVehicleModel",
+    "RelativePath": "VehicleModel/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Rento.Controllers.VehicleModels.Dto.GetVehicleModelDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Rento.Controllers.VehicleModels.VehicleModelController",
+    "Method": "GetAllVehicleModels",
+    "RelativePath": "VehicleModel/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Rento.Controllers.VehicleModels.Dto.GetVehicleModelDto, Rento, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Rento.Controllers.VehicleModels.VehicleModelController",
+    "Method": "UpdateVehicleModel",
+    "RelativePath": "VehicleModel/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateVehicleModeDto",
+        "Type": "Rento.Controllers.VehicleModels.Dto.UpdateVehicleModelDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
         "StatusCode": 200
       }
     ]

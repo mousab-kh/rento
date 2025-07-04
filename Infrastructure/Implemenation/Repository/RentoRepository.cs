@@ -7,11 +7,11 @@ using System.Linq.Expressions;
 
 namespace Rento.Infrastructure.Implemenation.Repository
 {
-    public abstract class RentoRepository<T> : IRepository<T> where T : class
+    public class Repository<T> : IRepository<T> where T : class
     {
         protected RentoDbContext RentoContexts { get; set; }
 
-        public RentoRepository(RentoDbContext context)
+        public Repository(RentoDbContext context)
         {
             RentoContexts = context;
         }
@@ -58,5 +58,9 @@ namespace Rento.Infrastructure.Implemenation.Repository
 
         }
 
+        public async Task<bool> AnyAsync(Expression<Func<T, bool>> predicate)
+        {
+            return await RentoContexts.Set<T>().AsQueryable().AnyAsync(predicate);
+        }
     }
 }
