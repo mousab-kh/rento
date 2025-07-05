@@ -13,6 +13,7 @@ namespace Rento.Infrastructure.Implemenation.Db
         public virtual DbSet<VehicleManufacturer> VehicleManufacturers { get; set; }
         public virtual DbSet<RentalRateSchema> RentalRateSchemas { get; set; }
         public virtual DbSet<RentalRate> RentalRates { get; set; }
+        public virtual DbSet<Booking> Bookings { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(
@@ -28,18 +29,15 @@ namespace Rento.Infrastructure.Implemenation.Db
                         .WithOne()
                         .HasForeignKey(b => b.BranchId)
                         .IsRequired();
-
             modelBuilder.Entity<BranchWorkingHour>()
                         .OwnsMany(b => b.Intervals, WorkingHourIntervalBuilder =>
                         {
                             WorkingHourIntervalBuilder.ToJson();
                         });
-
             modelBuilder.Entity<Branch>()
                         .HasMany<Vehicle>()
                         .WithOne()
                         .HasForeignKey(v => v.BranchId);
-
             modelBuilder.Entity<Vehicle>()
                         .HasOne<VehicleManufacturer>()
                         .WithOne()
@@ -49,7 +47,6 @@ namespace Rento.Infrastructure.Implemenation.Db
                         .HasOne<VehicleModel>()
                         .WithOne()
                         .HasForeignKey<Vehicle>(v => v.VehicleModelId);
-
             modelBuilder.Entity<VehicleCategorie>()
                         .HasMany<VehicleModel>()
                         .WithOne()
@@ -58,11 +55,12 @@ namespace Rento.Infrastructure.Implemenation.Db
                         .HasOne<RentalRateSchema>()
                         .WithOne()
                         .HasForeignKey<RentalRate>(i => i.RentalRateSchemasId);
+            modelBuilder.Entity<Booking>()
+                        .HasKey(i => i.Id);
             modelBuilder.Entity<Branch>() 
                 .Property(r => r.CoordinatesLatitude).HasPrecision(15, 15);
             modelBuilder.Entity<Branch>()
                 .Property(r => r.CoordinatesLongitude).HasPrecision(15, 15);
-
             base.OnModelCreating(modelBuilder);
         }
     }

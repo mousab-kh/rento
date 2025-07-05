@@ -5,7 +5,7 @@
 namespace Rento.Migrations
 {
     /// <inheritdoc />
-    public partial class VehicleCategorie : Migration
+    public partial class VehicleCategorieMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

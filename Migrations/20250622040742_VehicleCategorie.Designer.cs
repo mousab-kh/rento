@@ -13,7 +13,7 @@ namespace Rento.Migrations
 {
     [DbContext(typeof(RentoDbContext))]
     [Migration("20250622040742_VehicleCategorie")]
-    partial class VehicleCategorie
+    partial class VehicleCategorieMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

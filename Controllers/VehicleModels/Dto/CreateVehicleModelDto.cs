@@ -6,6 +6,8 @@ namespace Rento.Controllers.VehicleModels.Dto
     {
         [Required]
         public required string Name { get; set; }
+        [Range(1950, int.MaxValue)]
+        public int VehicleModelYear { get; set; }
         [Range(1, int.MaxValue)]
         public int VehicleCategorieId { get; set; }
     }

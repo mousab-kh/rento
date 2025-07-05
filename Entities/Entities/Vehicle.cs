@@ -71,11 +71,11 @@ namespace Rento.Entities.Entities
 
         private void SetYear(int year)
         {
-            //if (year.ToString().Length != 4)
-            //    throw new Exception("Invalid year");
+            if (year.ToString().Length != 4)
+                throw new Exception("Invalid year");
 
-            //if (year < 1900)
-            //    throw new Exception("Invalid year");
+            if (year < 1900)
+                throw new Exception("Invalid year");
 
             Year = year;
         }

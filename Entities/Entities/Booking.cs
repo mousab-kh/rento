@@ -7,43 +7,29 @@ namespace Rento.Entities.Entities
 {
     public class Booking
     {
-
         public int Id { get; set; }
-        public int BranchId { get; set; }
-        public int BranchWorkingHourId { get; set; }
-        public int VehicleId { get; set; }
-        public int VehicleCategorieId { get; set; }
+        public int PickupBranchId { get; set; }
+        public int DropOffBranchId { get; set; }
         public int VehicleModelId { get; set; }
-        public int VehicleManufacturerId { get; set; }
         public int RentalRateId { get; set; }
-        public int RentalRateSchemaId { get; set; }
-        public  DateTime Pickup  { get; set; }
-        public DateTime Dropff  { get; set; }
+        public DateTime PickupDate { get; set; }
+        public DateTime DropffDate { get; set; }
         public BookingStatus Status { get; set; }
 
-
         public Booking(
-           int branchId,
-           int branchWorkingHourId,
-           int vehicleId,
-           int vehicleCategorieId,
-           int vehicleModelId,
-           int vehicleManufacturerId,
-           int rentalRateId,
-           int rentalRateSchemaId,
-           DateTime pickup,
-           DateTime dropff,
-           BookingStatus status)
+            int pickupBranchId,
+            int dropOffBranchId,
+            int vehicleModelId,
+            int rentalRateId,
+            DateTime pickupDate, 
+            DateTime dropffDate,
+            BookingStatus status)
         {
-            BranchId= CheckId(branchId);
-            BranchWorkingHourId= CheckId(branchWorkingHourId);
-            VehicleId= CheckId(vehicleId);
-            VehicleCategorieId= CheckId(vehicleCategorieId);
-            VehicleModelId= CheckId(vehicleModelId);
-            VehicleModelId= CheckId(vehicleManufacturerId);
-            VehicleManufacturerId= CheckId(rentalRateId);
-            RentalRateSchemaId= CheckId(rentalRateSchemaId);
-            SetDate(pickup, dropff);
+            PickupBranchId = CheckId(pickupBranchId);
+            DropOffBranchId = CheckId(dropOffBranchId);
+            VehicleModelId = CheckId(vehicleModelId);
+            RentalRateId = CheckId(rentalRateId);
+            SetDate(pickupDate, dropffDate);
             SetStatus(status);
         }
 
@@ -56,8 +42,8 @@ namespace Rento.Entities.Entities
         private void SetDate(DateTime pickudate, DateTime dropffdate)
         {
             if (pickudate <= dropffdate) throw new Exception("Invalid Date");
-            Pickup = pickudate;
-            Dropff= dropffdate;
+            PickupDate = pickudate;
+            DropffDate = dropffdate;
         }
 
         private void SetStatus(BookingStatus bookingStatus)

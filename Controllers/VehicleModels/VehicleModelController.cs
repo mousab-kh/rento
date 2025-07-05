@@ -77,7 +77,8 @@ namespace Rento.Controllers.VehicleModels
 
             var create = new VehicleModel(
                 createVehicleModelDto.Name,
-                createVehicleModelDto.VehicleCategorieId);
+                createVehicleModelDto.VehicleCategorieId,
+                createVehicleModelDto.VehicleModelYear);
 
             _vehicleModelrepository.AddEntity(create);
             _vehicleModelrepository.Save();

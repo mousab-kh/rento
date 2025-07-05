@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Rento")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d8ec5ee26eecf66cd2dc73f61fbbe1d3985a123f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f2177a862232cefbda6e55660915c6c35e4c96be")]
 [assembly: System.Reflection.AssemblyProductAttribute("Rento")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Rento")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

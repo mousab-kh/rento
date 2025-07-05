@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Rento.Infrastructure.Implemenation.Db;
 
@@ -11,9 +12,11 @@ using Rento.Infrastructure.Implemenation.Db;
 namespace Rento.Migrations
 {
     [DbContext(typeof(RentoDbContext))]
-    partial class RentoDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250704023050_Booking")]
+    partial class BookingMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -49,6 +52,9 @@ namespace Rento.Migrations
                         .HasColumnType("int");
 
                     b.Property<int>("VehicleModelId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("VehicleModelYear")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -263,9 +269,6 @@ namespace Rento.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("VehicleCategorieId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("VehicleModelYear")
                         .HasColumnType("int");
 
                     b.HasKey("Id");

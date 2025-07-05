@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Rento.Controllers.Bookings.Dto;
 using Rento.Controllers.Branchs.Dto;
 using Rento.Controllers.BranchWorkingHours.Dto;
 using Rento.Controllers.RentalRates.Dto;
@@ -40,6 +41,9 @@ namespace Rento
 
             CreateMap<RentalRate, GetRentalRateDto>();
             CreateMap<UpdateRentalRateDto, RentalRate>();
+
+            CreateMap<Booking, GetBookingDto>();
+            CreateMap<UpdateBookingDto, Booking>();
         }
     }
 }

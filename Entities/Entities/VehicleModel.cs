@@ -1,4 +1,5 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿using Rento.Migrations;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Rento.Entities.Entities
 {
@@ -7,13 +8,24 @@ namespace Rento.Entities.Entities
         public int Id { get; set; }
         public required string Name { get; set; }
         public bool IsActive { get; set; }
+        public int VehicleModelYear { get; set; }
         public int VehicleCategorieId { get; set; }
 
         [SetsRequiredMembers]
-        public VehicleModel(string name, int vehicleCategorieId)
+        public VehicleModel(
+            string name, 
+            int vehicleCategorieId, 
+            int vehicleModelYear)
         {
             SetModelName(name);
             SetCategory(vehicleCategorieId);
+            SetVehicleModelYear(vehicleModelYear);
+        }
+
+        private void SetVehicleModelYear(int vehicleModelYear)
+        {
+            if (vehicleModelYear < 1950) throw new Exception("Invalid vehicle Model Year");
+            VehicleCategorieId=vehicleModelYear;
         }
 
         private void SetCategory(int vehicleCategorieId)
