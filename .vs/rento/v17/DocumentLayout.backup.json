@@ -7,12 +7,8 @@
       "RelativeMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|solutionrelative:controllers\\bookings\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|c:\\users\\mousab\\source\\repos\\rento\\controllers\\rentalrates\\rentalratecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|solutionrelative:controllers\\rentalrates\\rentalratecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|c:\\users\\mousab\\source\\repos\\rento\\controllers\\bookings\\dto\\createbookingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|solutionrelative:controllers\\bookings\\dto\\createbookingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|c:\\users\\mousab\\source\\repos\\rento\\entities\\entities\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|solutionrelative:entities\\entities\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,23 +18,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CreateBookingDto.cs",
-              "DocumentMoniker": "C:\\Users\\Mousab\\source\\repos\\rento\\Controllers\\Bookings\\Dto\\CreateBookingDto.cs",
-              "RelativeDocumentMoniker": "Controllers\\Bookings\\Dto\\CreateBookingDto.cs",
-              "ToolTip": "C:\\Users\\Mousab\\source\\repos\\rento\\Controllers\\Bookings\\Dto\\CreateBookingDto.cs",
-              "RelativeToolTip": "Controllers\\Bookings\\Dto\\CreateBookingDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAZAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Booking.cs",
+              "DocumentMoniker": "C:\\Users\\Mousab\\source\\repos\\rento\\Entities\\Entities\\Booking.cs",
+              "RelativeDocumentMoniker": "Entities\\Entities\\Booking.cs",
+              "ToolTip": "C:\\Users\\Mousab\\source\\repos\\rento\\Entities\\Entities\\Booking.cs",
+              "RelativeToolTip": "Entities\\Entities\\Booking.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-04T23:17:22.055Z",
+              "WhenOpened": "2025-07-05T03:59:37.467Z",
               "EditorCaption": ""
             },
             {
@@ -49,22 +41,9 @@
               "RelativeDocumentMoniker": "Controllers\\Bookings\\BookingController.cs",
               "ToolTip": "C:\\Users\\Mousab\\source\\repos\\rento\\Controllers\\Bookings\\BookingController.cs",
               "RelativeToolTip": "Controllers\\Bookings\\BookingController.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAgwDcAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAswBYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-04T02:47:25.541Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RentalRateController.cs",
-              "DocumentMoniker": "C:\\Users\\Mousab\\source\\repos\\rento\\Controllers\\RentalRates\\RentalRateController.cs",
-              "RelativeDocumentMoniker": "Controllers\\RentalRates\\RentalRateController.cs",
-              "ToolTip": "C:\\Users\\Mousab\\source\\repos\\rento\\Controllers\\RentalRates\\RentalRateController.cs",
-              "RelativeToolTip": "Controllers\\RentalRates\\RentalRateController.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAwwE4AAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-04T02:48:07.06Z",
               "EditorCaption": ""
             }
           ]

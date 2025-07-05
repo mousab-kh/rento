@@ -56,6 +56,19 @@ namespace Rento.Infrastructure.Implemenation.Db
                         .WithOne()
                         .HasForeignKey<RentalRate>(i => i.RentalRateSchemasId);
             modelBuilder.Entity<Booking>()
+                        .HasOne<Branch>()
+                        .WithOne()
+                        .HasForeignKey<Booking>(e => e.PickupBranchId)
+                        .HasForeignKey<Booking>(e => e.DropOffBranchId);
+            modelBuilder.Entity<Booking>()
+                        .HasOne<VehicleModel>()
+                        .WithOne()
+                        .HasForeignKey<Booking>(i => i.VehicleModelId);
+            modelBuilder.Entity<Booking>()
+                        .HasOne<RentalRate>()
+                        .WithOne()
+                        .HasForeignKey<Booking>(i => i.RentalRateId);
+            modelBuilder.Entity<Booking>()
                         .HasKey(i => i.Id);
             modelBuilder.Entity<Branch>() 
                 .Property(r => r.CoordinatesLatitude).HasPrecision(15, 15);

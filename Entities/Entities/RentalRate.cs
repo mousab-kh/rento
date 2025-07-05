@@ -19,10 +19,10 @@
             int rentalRateSchemasId)
         {
             SetDates(startDate, endDate);
-            SetId(vehicleCategorieId);
-            SetId(vehicleModelId);
+            vehicleCategorieId= CheckId(vehicleCategorieId);
+            vehicleModelId= CheckId(vehicleModelId);
             SetPrice(price) ;
-            SetId(rentalRateSchemasId);
+            rentalRateSchemasId = CheckId(rentalRateSchemasId);
         }
 
         private void SetPrice(decimal price)
@@ -31,11 +31,11 @@
                 throw new Exception("Invalid VehicleCategorieId");
         }
 
-        private void SetId(int vehicleCategorieId)
+        private static int CheckId(int id)
         {
-            if (vehicleCategorieId <= 0)
+            if (id <= 0)
                 throw new Exception("Invalid VehicleCategorieId");
-            VehicleCategorieId = vehicleCategorieId;
+            return id;
         }
 
         private void SetDates(DateOnly startDate, DateOnly endDate)

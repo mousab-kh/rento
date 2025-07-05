@@ -15,5 +15,6 @@ namespace Rento.Controllers.Bookings.Dto
         public int RentalRateId { get; set; }
         public DateTime PickupDate { get; set; }
         public DateTime DropffDate { get; set; }
+        public BookingStatus Status { get; set; }
     }
 }
