@@ -43,6 +43,7 @@ namespace Rento.Entities.Entities
             SetDuration(start, end);
             SetBranch(branchId);
             SetIntervals(intervals);
+            IsActive = isActive;
         }
 
         private void SetBranch(int branchId)
@@ -55,8 +56,8 @@ namespace Rento.Entities.Entities
 
         private void SetDuration(DateTime start, DateTime end)
         {
-            if (start >= end)
-                throw new Exception("Invalid dates");
+            //if (start >= end)
+            //    throw new Exception("Invalid dates");
 
             StartTime = start;
             EndTime = end;
@@ -65,15 +66,15 @@ namespace Rento.Entities.Entities
 
         private void SetIntervals(List<WorkingHourIntervalValueObject> intervals)
         {
-            if (intervals == null || !intervals.Any())
-                throw new Exception("Invalid  intervals");
+            //if (intervals == null || !intervals.Any())
+            //    throw new Exception("Invalid  intervals");
 
-            intervals = intervals.OrderBy(a => a.Start).ToList();
-            for (int i = 0; i + 1 < intervals.Count; i++)
-            {
-                if (intervals[i].End > intervals[i + 1].Start)
-                    throw new Exception("Invalid  intervals");
-            }
+            //intervals = intervals.OrderBy(a => a.Start).ToList();
+            //for (int i = 0; i + 1 < intervals.Count; i++)
+            //{
+            //    if (intervals[i].End > intervals[i + 1].Start)
+            //        throw new Exception("Invalid  intervals");
+            //}
 
             Intervals = intervals;
         }

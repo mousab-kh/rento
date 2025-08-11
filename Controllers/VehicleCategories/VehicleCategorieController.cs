@@ -8,7 +8,7 @@ using VehicleCategorie = Rento.Entities.Entities.VehicleCategorie;
 namespace Rento.Controllers.VehicleCategories
 {
     [ApiController]
-    [Route("VehicleCategorie")]
+    [Route("Vehicle/VehicleCategorie")]
     public class VehicleCategorieController  : ControllerBase
     {
 
@@ -23,7 +23,7 @@ namespace Rento.Controllers.VehicleCategories
             _mapper = mapper;
         }
 
-        [HttpGet("Get")]
+        [HttpGet("{id}")]
         public async Task<GetVehicleCategorieDto> GetVehicleCategorie(int id)
         {
             if (id <= 0) throw new Exception ("Invalid Vehicle Categorie");
@@ -34,7 +34,7 @@ namespace Rento.Controllers.VehicleCategories
             return _mapper.Map<GetVehicleCategorieDto>(categorie);
         }
 
-        [HttpGet("GetAll")]
+        [HttpGet]
         public async Task<List<GetVehicleCategorieDto>> GetAllCategorie()
         {
             var categorie = await _vehicleCategorierrepository.GetAll().ToListAsync();
@@ -44,7 +44,7 @@ namespace Rento.Controllers.VehicleCategories
 
         }
 
-        [HttpDelete("Delete")]
+        [HttpDelete("{id}")]
         public async Task DeleteCategorie(int id)
         {
             var categorie = await _vehicleCategorierrepository.GetEntityAsync(id);
@@ -54,8 +54,8 @@ namespace Rento.Controllers.VehicleCategories
 
         }
 
-        [HttpPut("Update")]
-        public async Task UpdateCategorie(UpdateVehicleCategorieDto updateVehicleCategorieDto)
+        [HttpPut]
+        public async Task<IActionResult> UpdateCategorie(UpdateVehicleCategorieDto updateVehicleCategorieDto)
         {
             if(!await _vehicleCategorierrepository.AnyAsync(i=> i.Id== updateVehicleCategorieDto.Id))
                 throw new Exception("Invalid Vehicle Categorie");
@@ -64,16 +64,19 @@ namespace Rento.Controllers.VehicleCategories
             _vehicleCategorierrepository.Clear();
 
             var categoriemap = _mapper.Map< VehicleCategorie>(updateVehicleCategorieDto);
-            _vehicleCategorierrepository.DeleteEntity(categoriemap);
+            _vehicleCategorierrepository.UpdateEntity(categoriemap);
             _vehicleCategorierrepository.Save();
+            return Ok(categoriemap);
         }
 
-        [HttpPost("Create")]
-        public async Task CreateCategorie(CreateVehicleCategorieDto createVehicleCategorieDto)
+        [HttpPost]
+        public async Task<IActionResult> CreateCategorie(CreateVehicleCategorieDto createVehicleCategorieDto)
         {
             var create = new VehicleCategorie(createVehicleCategorieDto.Name);
             _vehicleCategorierrepository.AddEntity(create);
             _vehicleCategorierrepository.Save();
+
+            return Ok(create);
         }
     }
 }

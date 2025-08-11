@@ -23,8 +23,8 @@ namespace Rento.Entities.Entities
 
         private void SetDate(DateOnly from, DateOnly to)
         {
-            if (from <= to)
-                throw new Exception("Invalid Date");
+            //if (from <= to)
+            //    throw new Exception("Invalid Date");
             DayRentTo = to;
             DayRentFrom = from;
         }

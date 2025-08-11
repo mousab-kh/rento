@@ -1,0 +1,41 @@
+.container {
+  text-align: center;
+  padding: 50px;
+  direction: rtl;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  margin-bottom: 40px;
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+button {
+  margin: 10px;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.btn-branch {
+  background-color: #28a745;
+}
+
+.btn-car {
+  background-color: #17a2b8;
+}
+
+.btn-payment {
+  background-color: #dc3545;
+}
+
+button:hover {
+  opacity: 0.85;
+}

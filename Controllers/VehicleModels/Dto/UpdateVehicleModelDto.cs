@@ -8,7 +8,7 @@ namespace Rento.Controllers.VehicleModels.Dto
         public int Id { get; set; }
         [Required]
         public required string Name { get; set; }
-        [Range(1950, int.MaxValue)]
+        //[Range(1950, int.MaxValue)]
         public int VehicleModelYear { get; set; }
         public bool IsActive { get; set; }
         [Range(1, int.MaxValue)]

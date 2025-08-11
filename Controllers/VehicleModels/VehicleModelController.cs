@@ -8,7 +8,7 @@ using Rento.Infrastructure.Interfaces;
 namespace Rento.Controllers.VehicleModels
 {
     [ApiController]
-    [Route("VehicleModel")]
+    [Route("Vehicle/VehicleCategorie/{id}/VehicleModel")]
     public class VehicleModelController : ControllerBase
     {
         private readonly IRepository<VehicleCategorie> _vehicleCategorierepository;
@@ -25,36 +25,38 @@ namespace Rento.Controllers.VehicleModels
             _mapper = mapper;
         }
 
-        [HttpGet("Get")]
-        public async Task<GetVehicleModelDto> GetVehicleModel(int id)
+        [HttpGet("{Modelid}")]
+        public async Task<GetVehicleModelDto> GetVehicleModel(int Modelid)
         {
-            if (id <= 0) throw new Exception("Invalid Vehicle Model");
-            var vehicleModel = await _vehicleModelrepository.GetEntityAsync(id);
+            if (Modelid <= 0) throw new Exception("Invalid Vehicle Model");
+            var vehicleModel = await _vehicleModelrepository.GetEntityAsync(Modelid);
             if (vehicleModel == null) throw new Exception("Invalid vehicle Model");
 
             return _mapper.Map<GetVehicleModelDto>(vehicleModel);
         }
 
-        [HttpGet("GetAll")]
-        public async Task<List<GetVehicleModelDto>> GetAllVehicleModels()
+        [HttpGet]
+        public async Task<List<GetVehicleModelDto>> GetAllVehicleModels(int id)
         {
-            var vehicleModel = await _vehicleModelrepository.GetAll().ToListAsync();
+            var vehicleModel = await _vehicleModelrepository.GetAll().
+                Where(Categorie => Categorie.VehicleCategorieId== id).ToListAsync();
             if (vehicleModel == null) throw new Exception("Invalid vehicle Model");
             return _mapper.Map<List<GetVehicleModelDto>>(vehicleModel);
         }
 
-        [HttpDelete("Delete")]
-        public async Task DeleteVehicleMode(int id)
+        [HttpDelete("{Modelid}")]
+        public async Task<IActionResult> DeleteVehicleMode(int Modelid)
         {
-            if (id <= 0) throw new Exception("Invalid Vehicle Model");
-            var vehicleModel = await _vehicleModelrepository.GetEntityAsync(id);
+            if (Modelid <= 0) throw new Exception("Invalid Vehicle Model");
+            var vehicleModel = await _vehicleModelrepository.GetEntityAsync(Modelid);
             if (vehicleModel == null) throw new Exception("Invalid vehicle Model");
             _vehicleModelrepository.DeleteEntity(vehicleModel);
             _vehicleModelrepository.Save();
+            return Ok(vehicleModel);
         }
 
-        [HttpPut("Update")]
-        public async Task UpdateVehicleModel(UpdateVehicleModelDto updateVehicleModeDto)
+        [HttpPut]
+        public async Task<IActionResult> UpdateVehicleModel(UpdateVehicleModelDto updateVehicleModeDto)
         {
             if (!await _vehicleModelrepository.AnyAsync(i=> i.Id==updateVehicleModeDto.Id))
                 throw new Exception("Invalid vehicle Model");
@@ -64,11 +66,11 @@ namespace Rento.Controllers.VehicleModels
             _vehicleModelrepository.Clear();
             _vehicleModelrepository.UpdateEntity(vehicleModelmap);
             _vehicleModelrepository.Save();
-
+            return Ok(vehicleModelmap);
         }
 
-        [HttpPost("Create")]
-        public async Task CreateVehicleModel(CreateVehicleModelDto createVehicleModelDto)
+        [HttpPost]
+        public async Task<IActionResult> CreateVehicleModel(CreateVehicleModelDto createVehicleModelDto)
         {
 
             if (!await _vehicleCategorierepository
@@ -82,6 +84,7 @@ namespace Rento.Controllers.VehicleModels
 
             _vehicleModelrepository.AddEntity(create);
             _vehicleModelrepository.Save();
+            return Ok(create);
         }
     }
 }

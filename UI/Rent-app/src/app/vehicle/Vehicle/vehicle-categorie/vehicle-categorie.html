@@ -1,0 +1,63 @@
+<!-- vehicle-categorie.component.html -->
+<table class="vehicle-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>الاسم</th>
+            <th>الوصف</th>
+            <th>معالجة</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr *ngFor="let category of vehiclecategories" (click)="onRowSelect(category)">
+
+            <td>{{ category.id }}</td>
+            <td *ngIf="category.id!==categoryUpdateid">{{ category.name }}</td>
+            <td *ngIf="category.id!==categoryUpdateid">{{ category.isActive }}</td>
+            <td *ngIf="category.id!==categoryUpdateid">
+                <button (click)="onRowDelete(category.id )">حذف</button>
+                <button (click)="onRowUpdate(category)">تعديل</button>
+            </td>
+
+            <td *ngIf="category.id===categoryUpdateid">
+                <input type="text" [(ngModel)]="category.name" name="categorynameChange{{category.id}}" />
+            </td>
+            <td *ngIf="category.id===categoryUpdateid">
+                <label>✅ فعال
+                    <input type="radio" [(ngModel)]="category.isActive" [value]="true"
+                        name="categoryActiveChange{{category.id}}" />
+                </label>
+                <label>
+                    <input type="radio" [(ngModel)]="category.isActive" [value]="false"
+                        name="categoryActiveChange{{category.id}}" />
+                    ❌ غير فعال
+                </label>
+            </td>
+            <td *ngIf="category.id===categoryUpdateid">
+                <button (click)="onRowSave(category)">حفظ</button>
+            </td>
+        </tr>
+        <ng-container *ngIf="createMode && categorycreate">
+            <tr>
+                <td>{{categorycreate.id}}</td>
+                <td>
+                    <input type="text" [(ngModel)]="categorycreate.name" name="categorynameChange{{categorycreate.id}}" />
+                </td>
+                <td>
+                    <label>✅ فعال
+                    <input type="radio" [(ngModel)]="categorycreate.isActive" [value]="true"
+                        name="categoryActiveChange{{categorycreate.id}}" />
+                </label>
+                <label>
+                    <input type="radio" [(ngModel)]="categorycreate.isActive" [value]="false"
+                        name="categoryActiveChange{{categorycreate.id}}" />
+                    ❌ غير فعال
+                </label>
+                </td>
+                <button (click)="Rowcreate(categorycreate)">حفظ</button>
+            </tr>
+        </ng-container>
+    </tbody>
+</table>
+ <button (click)="onRowCreate()">إنشاء</button>

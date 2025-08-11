@@ -173,3 +173,9 @@ C:\Users\Mousab\source\repos\Rento\obj\Debug\net8.0\staticwebassets.upToDateChec
 C:\Users\Mousab\source\repos\Rento\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\Mousab\source\repos\Rento\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\Mousab\source\repos\Rento\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Mousab\source\repos\Rento\bin\Debug\net8.0\UI\Rent-app\angular.json
+C:\Users\Mousab\source\repos\Rento\bin\Debug\net8.0\UI\Rent-app\package-lock.json
+C:\Users\Mousab\source\repos\Rento\bin\Debug\net8.0\UI\Rent-app\package.json
+C:\Users\Mousab\source\repos\Rento\bin\Debug\net8.0\UI\Rent-app\tsconfig.app.json
+C:\Users\Mousab\source\repos\Rento\bin\Debug\net8.0\UI\Rent-app\tsconfig.json
+C:\Users\Mousab\source\repos\Rento\bin\Debug\net8.0\UI\Rent-app\tsconfig.spec.json

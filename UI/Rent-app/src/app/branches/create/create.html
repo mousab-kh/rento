@@ -1,0 +1,26 @@
+<h2>انشاء قسم</h2>
+<div class="simple-form">
+  <label>
+    اسم القسم:
+    <input type="text" [(ngModel)]="createBranches.name">
+  </label>
+
+  <label>
+    خطوط العرض (Latitude):
+    <input type="number" [(ngModel)]="createBranches.coordinatesLatitude">
+  </label>
+
+  <label>
+    خطوط الطول (Longitude):
+    <input type="number" [(ngModel)]="createBranches.coordinatesLongitude">
+  </label>
+
+  <label>
+    الحالة:
+    <select [(ngModel)]="createBranches.isActive">
+      <option value="true">فعال</option>
+      <option value="false">غير فعال</option>
+    </select>
+  </label> 
+<button  (click)="createBranch(createBranches)">موافقة</button>
+</div> 

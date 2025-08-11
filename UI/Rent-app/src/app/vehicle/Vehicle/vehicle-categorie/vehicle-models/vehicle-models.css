@@ -1,0 +1,54 @@
+:host {
+  direction: rtl;
+}
+
+.table-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.vehicle-models-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.vehicle-models-table thead {
+  background-color: #343a40;
+  color: white;
+}
+
+.vehicle-models-table th,
+.vehicle-models-table td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+}
+
+.vehicle-models-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.vehicle-models-table tbody tr:hover {
+  background-color: #e0f7fa;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 0.3rem 0.6rem;
+  margin: 0 0.2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}

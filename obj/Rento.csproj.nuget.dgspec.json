@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mousab\\source\\repos\\Rento\\Rento.csproj": {}
+    "C:\\Users\\Mousab\\source\\repos\\rento\\Rento.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mousab\\source\\repos\\Rento\\Rento.csproj": {
+    "C:\\Users\\Mousab\\source\\repos\\rento\\Rento.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mousab\\source\\repos\\Rento\\Rento.csproj",
+        "projectUniqueName": "C:\\Users\\Mousab\\source\\repos\\rento\\Rento.csproj",
         "projectName": "Rento",
-        "projectPath": "C:\\Users\\Mousab\\source\\repos\\Rento\\Rento.csproj",
+        "projectPath": "C:\\Users\\Mousab\\source\\repos\\rento\\Rento.csproj",
         "packagesPath": "C:\\Users\\Mousab\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Mousab\\source\\repos\\Rento\\obj\\",
         "projectStyle": "PackageReference",

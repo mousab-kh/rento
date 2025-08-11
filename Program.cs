@@ -24,9 +24,18 @@ builder.Services.AddSwaggerGen(options =>
     options.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
 });
 
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+    {
+        policy.WithOrigins("http://localhost:4200") // your Angular dev server
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
 var app = builder.Build();
 
-    
 
 app.UseSwagger();
 app.UseSwaggerUI(options =>
@@ -39,6 +48,7 @@ app.UseSwaggerUI(options =>
 app.UseDeveloperExceptionPage();
 
 app.UseHttpsRedirection();
+app.UseCors();
 
 app.UseAuthorization();
 

@@ -11,17 +11,17 @@ namespace Rento.Controllers.Branchs
     [Route("Branch")]
     public class BranchController : ControllerBase
     {
-        
+
         private IRepository<Branch> _branchrepository;
         private IMapper _mapper;
 
-        public BranchController(IRepository<Branch> repository,IMapper mapper)
+        public BranchController(IRepository<Branch> repository, IMapper mapper)
         {
             _branchrepository = repository;
             _mapper = mapper;
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task DeleteBranch(int id)
         {
             if (id<0) throw new Exception

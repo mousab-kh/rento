@@ -166,7 +166,7 @@
         }
       }
     },
-    "/Branch": {
+    "/Branch/{id}": {
       "delete": {
         "tags": [
           "Branch"
@@ -174,7 +174,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -186,7 +187,9 @@
             "description": "OK"
           }
         }
-      },
+      }
+    },
+    "/Branch": {
       "put": {
         "tags": [
           "Branch"
@@ -322,10 +325,20 @@
         }
       }
     },
-    "/BranchWorkingHours": {
+    "/Branch/{branchid}/BranchWorkingHour": {
       "post": {
         "tags": [
           "BranchWorkingHours"
+        ],
+        "parameters": [
+          {
+            "name": "branchid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
         ],
         "requestBody": {
           "content": {
@@ -355,6 +368,17 @@
       "get": {
         "tags": [
           "BranchWorkingHours"
+        ],
+        "parameters": [
+          {
+            "name": "branchid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -392,6 +416,16 @@
         "tags": [
           "BranchWorkingHours"
         ],
+        "parameters": [
+          {
+            "name": "branchid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -416,6 +450,54 @@
             "description": "OK"
           }
         }
+      }
+    },
+    "/Branch/{branchid}/BranchWorkingHour/{id}": {
+      "get": {
+        "tags": [
+          "BranchWorkingHours"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "branchid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetBranchWorkingHourOutputDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetBranchWorkingHourOutputDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetBranchWorkingHourOutputDto"
+                }
+              }
+            }
+          }
+        }
       },
       "delete": {
         "tags": [
@@ -424,10 +506,19 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "branchid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
             }
           }
         ],
@@ -438,10 +529,10 @@
         }
       }
     },
-    "/BranchWorkingHours/{id}": {
+    "/RentalRate/{id}": {
       "get": {
         "tags": [
-          "BranchWorkingHours"
+          "RentalRate"
         ],
         "parameters": [
           {
@@ -460,45 +551,6 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetBranchWorkingHourOutputDto"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetBranchWorkingHourOutputDto"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetBranchWorkingHourOutputDto"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/RentalRate/Get": {
-      "get": {
-        "tags": [
-          "RentalRate"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
                   "$ref": "#/components/schemas/GetRentalRateDto"
                 }
               },
@@ -515,47 +567,7 @@
             }
           }
         }
-      }
-    },
-    "/RentalRate/GetAll": {
-      "get": {
-        "tags": [
-          "RentalRate"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/GetRentalRateDto"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/GetRentalRateDto"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/GetRentalRateDto"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/RentalRate/Delete": {
+      },
       "delete": {
         "tags": [
           "RentalRate"
@@ -563,7 +575,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -577,7 +590,43 @@
         }
       }
     },
-    "/RentalRate/Update": {
+    "/RentalRate": {
+      "get": {
+        "tags": [
+          "RentalRate"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetRentalRateDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetRentalRateDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetRentalRateDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
       "put": {
         "tags": [
           "RentalRate"
@@ -606,9 +655,7 @@
             "description": "OK"
           }
         }
-      }
-    },
-    "/RentalRate/Create": {
+      },
       "post": {
         "tags": [
           "RentalRate"
@@ -639,7 +686,7 @@
         }
       }
     },
-    "/RentalRateSchemas/Get": {
+    "/RentalRateSchemas/{id}": {
       "get": {
         "tags": [
           "RentalRateSchema"
@@ -647,7 +694,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -676,47 +724,7 @@
             }
           }
         }
-      }
-    },
-    "/RentalRateSchemas/GetAll": {
-      "get": {
-        "tags": [
-          "RentalRateSchema"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/GetRentalRateSchemaDto"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/GetRentalRateSchemaDto"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/GetRentalRateSchemaDto"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/RentalRateSchemas/Delete": {
+      },
       "delete": {
         "tags": [
           "RentalRateSchema"
@@ -724,7 +732,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -738,7 +747,43 @@
         }
       }
     },
-    "/RentalRateSchemas/Update": {
+    "/RentalRateSchemas": {
+      "get": {
+        "tags": [
+          "RentalRateSchema"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetRentalRateSchemaDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetRentalRateSchemaDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetRentalRateSchemaDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
       "put": {
         "tags": [
           "RentalRateSchema"
@@ -767,9 +812,7 @@
             "description": "OK"
           }
         }
-      }
-    },
-    "/RentalRateSchemas/Create": {
+      },
       "post": {
         "tags": [
           "RentalRateSchema"
@@ -961,7 +1004,7 @@
         }
       }
     },
-    "/VehicleCategorie/Get": {
+    "/Vehicle/VehicleCategorie/{id}": {
       "get": {
         "tags": [
           "VehicleCategorie"
@@ -969,7 +1012,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -998,9 +1042,30 @@
             }
           }
         }
+      },
+      "delete": {
+        "tags": [
+          "VehicleCategorie"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     },
-    "/VehicleCategorie/GetAll": {
+    "/Vehicle/VehicleCategorie": {
       "get": {
         "tags": [
           "VehicleCategorie"
@@ -1036,31 +1101,7 @@
             }
           }
         }
-      }
-    },
-    "/VehicleCategorie/Delete": {
-      "delete": {
-        "tags": [
-          "VehicleCategorie"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/VehicleCategorie/Update": {
+      },
       "put": {
         "tags": [
           "VehicleCategorie"
@@ -1089,9 +1130,7 @@
             "description": "OK"
           }
         }
-      }
-    },
-    "/VehicleCategorie/Create": {
+      },
       "post": {
         "tags": [
           "VehicleCategorie"
@@ -1122,7 +1161,7 @@
         }
       }
     },
-    "/VehicleManufacturer/Get": {
+    "/Vehicle/VehicleManufacturer/{id}": {
       "get": {
         "tags": [
           "VehicleManufacturer"
@@ -1130,7 +1169,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -1159,9 +1199,30 @@
             }
           }
         }
+      },
+      "delete": {
+        "tags": [
+          "VehicleManufacturer"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     },
-    "/VehicleManufacturer/GetAll": {
+    "/Vehicle/VehicleManufacturer": {
       "get": {
         "tags": [
           "VehicleManufacturer"
@@ -1197,31 +1258,7 @@
             }
           }
         }
-      }
-    },
-    "/VehicleManufacturer/Delete": {
-      "delete": {
-        "tags": [
-          "VehicleManufacturer"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/VehicleManufacturer/Update": {
+      },
       "put": {
         "tags": [
           "VehicleManufacturer"
@@ -1250,9 +1287,7 @@
             "description": "OK"
           }
         }
-      }
-    },
-    "/VehicleManufacturer/Create": {
+      },
       "post": {
         "tags": [
           "VehicleManufacturer"
@@ -1283,19 +1318,28 @@
         }
       }
     },
-    "/VehicleModel/Get": {
+    "/Vehicle/VehicleCategorie/{id}/VehicleModel/{Modelid}": {
       "get": {
         "tags": [
           "VehicleModel"
         ],
         "parameters": [
           {
-            "name": "id",
-            "in": "query",
+            "name": "Modelid",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
             }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -1320,58 +1364,27 @@
             }
           }
         }
-      }
-    },
-    "/VehicleModel/GetAll": {
-      "get": {
-        "tags": [
-          "VehicleModel"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/GetVehicleModelDto"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/GetVehicleModelDto"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/GetVehicleModelDto"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/VehicleModel/Delete": {
+      },
       "delete": {
         "tags": [
           "VehicleModel"
         ],
         "parameters": [
           {
-            "name": "id",
-            "in": "query",
+            "name": "Modelid",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
             }
           }
         ],
@@ -1382,10 +1395,67 @@
         }
       }
     },
-    "/VehicleModel/Update": {
+    "/Vehicle/VehicleCategorie/{id}/VehicleModel": {
+      "get": {
+        "tags": [
+          "VehicleModel"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetVehicleModelDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetVehicleModelDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetVehicleModelDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
       "put": {
         "tags": [
           "VehicleModel"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
         ],
         "requestBody": {
           "content": {
@@ -1411,12 +1481,20 @@
             "description": "OK"
           }
         }
-      }
-    },
-    "/VehicleModel/Create": {
+      },
       "post": {
         "tags": [
           "VehicleModel"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
         ],
         "requestBody": {
           "content": {
@@ -1593,8 +1671,6 @@
         "type": "object",
         "properties": {
           "id": {
-            "maximum": 2147483647,
-            "minimum": 1,
             "type": "integer",
             "format": "int32"
           },
@@ -1704,8 +1780,6 @@
             "type": "string"
           },
           "vehicleModelYear": {
-            "maximum": 2147483647,
-            "minimum": 1950,
             "type": "integer",
             "format": "int32"
           },
@@ -1883,8 +1957,6 @@
         "type": "object",
         "properties": {
           "id": {
-            "maximum": 2147483647,
-            "minimum": 1,
             "type": "integer",
             "format": "int32"
           },
@@ -2009,8 +2081,6 @@
             "type": "string"
           },
           "vehicleModelYear": {
-            "maximum": 2147483647,
-            "minimum": 1950,
             "type": "integer",
             "format": "int32"
           },
@@ -2196,8 +2266,6 @@
         "type": "object",
         "properties": {
           "id": {
-            "maximum": 2147483647,
-            "minimum": 1,
             "type": "integer",
             "format": "int32"
           },
@@ -2319,8 +2387,6 @@
             "type": "string"
           },
           "vehicleModelYear": {
-            "maximum": 2147483647,
-            "minimum": 1950,
             "type": "integer",
             "format": "int32"
           },

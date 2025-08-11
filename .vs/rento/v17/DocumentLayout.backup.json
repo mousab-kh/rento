@@ -3,12 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\Mousab\\source\\repos\\rento\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|c:\\users\\mousab\\source\\repos\\rento\\controllers\\bookings\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|solutionrelative:controllers\\bookings\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|c:\\users\\mousab\\source\\repos\\rento\\controllers\\rentalrates\\rentalratecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|solutionrelative:controllers\\rentalrates\\rentalratecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|c:\\users\\mousab\\source\\repos\\rento\\entities\\entities\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|solutionrelative:entities\\entities\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|c:\\users\\mousab\\source\\repos\\rento\\controllers\\vehicles\\vehiclecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|solutionrelative:controllers\\vehicles\\vehiclecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|c:\\users\\mousab\\source\\repos\\rento\\controllers\\rentalrateschemas\\rentalrateschemacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|solutionrelative:controllers\\rentalrateschemas\\rentalrateschemacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|c:\\users\\mousab\\source\\repos\\rento\\controllers\\rentalrateschemas\\dto\\updaterentalrateschemadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|solutionrelative:controllers\\rentalrateschemas\\dto\\updaterentalrateschemadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|c:\\users\\mousab\\source\\repos\\rento\\controllers\\rentalrateschemas\\dto\\createrentalrateschemadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|solutionrelative:controllers\\rentalrateschemas\\dto\\createrentalrateschemadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|c:\\users\\mousab\\source\\repos\\rento\\controllers\\rentalrates\\dto\\createrentalratedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|solutionrelative:controllers\\rentalrates\\dto\\createrentalratedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|c:\\users\\mousab\\source\\repos\\rento\\controllers\\rentalrateschemas\\dto\\getrentalrateschemadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|solutionrelative:controllers\\rentalrateschemas\\dto\\getrentalrateschemadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|c:\\users\\mousab\\source\\repos\\rento\\entities\\entities\\rentalrateschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|solutionrelative:entities\\entities\\rentalrateschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|c:\\users\\mousab\\source\\repos\\rento\\controllers\\vehiclecategories\\vehiclecategoriecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|solutionrelative:controllers\\vehiclecategories\\vehiclecategoriecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|c:\\users\\mousab\\source\\repos\\rento\\controllers\\vehiclemanufacturers\\vehiclemanufacturercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|solutionrelative:controllers\\vehiclemanufacturers\\vehiclemanufacturercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|c:\\users\\mousab\\source\\repos\\rento\\controllers\\vehiclemodels\\vehiclemodelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|solutionrelative:controllers\\vehiclemodels\\vehiclemodelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|c:\\users\\mousab\\source\\repos\\rento\\entities\\entities\\vehiclemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|solutionrelative:entities\\entities\\vehiclemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|c:\\users\\mousab\\source\\repos\\rento\\controllers\\vehiclemodels\\dto\\getvehiclemodeldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DB89966-CD79-4AD6-8C70-4C83E78A7AD6}|Rento.csproj|solutionrelative:controllers\\vehiclemodels\\dto\\getvehiclemodeldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,33 +62,165 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Booking.cs",
-              "DocumentMoniker": "C:\\Users\\Mousab\\source\\repos\\rento\\Entities\\Entities\\Booking.cs",
-              "RelativeDocumentMoniker": "Entities\\Entities\\Booking.cs",
-              "ToolTip": "C:\\Users\\Mousab\\source\\repos\\rento\\Entities\\Entities\\Booking.cs",
-              "RelativeToolTip": "Entities\\Entities\\Booking.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAvAAAAAAAAAA==",
+              "Title": "VehicleController.cs",
+              "DocumentMoniker": "C:\\Users\\Mousab\\source\\repos\\rento\\Controllers\\Vehicles\\VehicleController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Vehicles\\VehicleController.cs",
+              "ToolTip": "C:\\Users\\Mousab\\source\\repos\\rento\\Controllers\\Vehicles\\VehicleController.cs",
+              "RelativeToolTip": "Controllers\\Vehicles\\VehicleController.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAgwFIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-05T03:59:37.467Z",
+              "WhenOpened": "2025-08-04T20:37:00.749Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BookingController.cs",
-              "DocumentMoniker": "C:\\Users\\Mousab\\source\\repos\\rento\\Controllers\\Bookings\\BookingController.cs",
-              "RelativeDocumentMoniker": "Controllers\\Bookings\\BookingController.cs",
-              "ToolTip": "C:\\Users\\Mousab\\source\\repos\\rento\\Controllers\\Bookings\\BookingController.cs",
-              "RelativeToolTip": "Controllers\\Bookings\\BookingController.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAAAswBYAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "CreateRentalRateDto.cs",
+              "DocumentMoniker": "C:\\Users\\Mousab\\source\\repos\\rento\\Controllers\\RentalRates\\Dto\\CreateRentalRateDto.cs",
+              "RelativeDocumentMoniker": "Controllers\\RentalRates\\Dto\\CreateRentalRateDto.cs",
+              "ToolTip": "C:\\Users\\Mousab\\source\\repos\\rento\\Controllers\\RentalRates\\Dto\\CreateRentalRateDto.cs",
+              "RelativeToolTip": "Controllers\\RentalRates\\Dto\\CreateRentalRateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-04T02:47:25.541Z",
+              "WhenOpened": "2025-08-04T05:56:22.188Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UpdateRentalRateSchemaDto.cs",
+              "DocumentMoniker": "C:\\Users\\Mousab\\source\\repos\\rento\\Controllers\\RentalRateSchemas\\Dto\\UpdateRentalRateSchemaDto.cs",
+              "RelativeDocumentMoniker": "Controllers\\RentalRateSchemas\\Dto\\UpdateRentalRateSchemaDto.cs",
+              "ToolTip": "C:\\Users\\Mousab\\source\\repos\\rento\\Controllers\\RentalRateSchemas\\Dto\\UpdateRentalRateSchemaDto.cs",
+              "RelativeToolTip": "Controllers\\RentalRateSchemas\\Dto\\UpdateRentalRateSchemaDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T05:37:20.528Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CreateRentalRateSchemaDto.cs",
+              "DocumentMoniker": "C:\\Users\\Mousab\\source\\repos\\rento\\Controllers\\RentalRateSchemas\\Dto\\CreateRentalRateSchemaDto.cs",
+              "RelativeDocumentMoniker": "Controllers\\RentalRateSchemas\\Dto\\CreateRentalRateSchemaDto.cs",
+              "ToolTip": "C:\\Users\\Mousab\\source\\repos\\rento\\Controllers\\RentalRateSchemas\\Dto\\CreateRentalRateSchemaDto.cs",
+              "RelativeToolTip": "Controllers\\RentalRateSchemas\\Dto\\CreateRentalRateSchemaDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T05:37:06.41Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RentalRateSchema.cs",
+              "DocumentMoniker": "C:\\Users\\Mousab\\source\\repos\\rento\\Entities\\Entities\\RentalRateSchema.cs",
+              "RelativeDocumentMoniker": "Entities\\Entities\\RentalRateSchema.cs",
+              "ToolTip": "C:\\Users\\Mousab\\source\\repos\\rento\\Entities\\Entities\\RentalRateSchema.cs",
+              "RelativeToolTip": "Entities\\Entities\\RentalRateSchema.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T05:33:11.607Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RentalRateController.cs",
+              "DocumentMoniker": "C:\\Users\\Mousab\\source\\repos\\rento\\Controllers\\RentalRates\\RentalRateController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RentalRates\\RentalRateController.cs",
+              "ToolTip": "C:\\Users\\Mousab\\source\\repos\\rento\\Controllers\\RentalRates\\RentalRateController.cs",
+              "RelativeToolTip": "Controllers\\RentalRates\\RentalRateController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAcwGIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T05:32:43.13Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "VehicleCategorieController.cs",
+              "DocumentMoniker": "C:\\Users\\Mousab\\source\\repos\\rento\\Controllers\\VehicleCategories\\VehicleCategorieController.cs",
+              "RelativeDocumentMoniker": "Controllers\\VehicleCategories\\VehicleCategorieController.cs",
+              "ToolTip": "C:\\Users\\Mousab\\source\\repos\\rento\\Controllers\\VehicleCategories\\VehicleCategorieController.cs",
+              "RelativeToolTip": "Controllers\\VehicleCategories\\VehicleCategorieController.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAowEQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T23:19:13.064Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GetRentalRateSchemaDto.cs",
+              "DocumentMoniker": "C:\\Users\\Mousab\\source\\repos\\rento\\Controllers\\RentalRateSchemas\\Dto\\GetRentalRateSchemaDto.cs",
+              "RelativeDocumentMoniker": "Controllers\\RentalRateSchemas\\Dto\\GetRentalRateSchemaDto.cs",
+              "ToolTip": "C:\\Users\\Mousab\\source\\repos\\rento\\Controllers\\RentalRateSchemas\\Dto\\GetRentalRateSchemaDto.cs",
+              "RelativeToolTip": "Controllers\\RentalRateSchemas\\Dto\\GetRentalRateSchemaDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T10:27:17.54Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RentalRateSchemaController.cs",
+              "DocumentMoniker": "C:\\Users\\Mousab\\source\\repos\\rento\\Controllers\\RentalRateSchemas\\RentalRateSchemaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RentalRateSchemas\\RentalRateSchemaController.cs",
+              "ToolTip": "C:\\Users\\Mousab\\source\\repos\\rento\\Controllers\\RentalRateSchemas\\RentalRateSchemaController.cs",
+              "RelativeToolTip": "Controllers\\RentalRateSchemas\\RentalRateSchemaController.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAcwEUAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T10:27:00.554Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "VehicleModel.cs",
+              "DocumentMoniker": "C:\\Users\\Mousab\\source\\repos\\rento\\Entities\\Entities\\VehicleModel.cs",
+              "RelativeDocumentMoniker": "Entities\\Entities\\VehicleModel.cs",
+              "ToolTip": "C:\\Users\\Mousab\\source\\repos\\rento\\Entities\\Entities\\VehicleModel.cs",
+              "RelativeToolTip": "Entities\\Entities\\VehicleModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-01T06:38:58.466Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "GetVehicleModelDto.cs",
+              "DocumentMoniker": "C:\\Users\\Mousab\\source\\repos\\rento\\Controllers\\VehicleModels\\Dto\\GetVehicleModelDto.cs",
+              "RelativeDocumentMoniker": "Controllers\\VehicleModels\\Dto\\GetVehicleModelDto.cs",
+              "ToolTip": "C:\\Users\\Mousab\\source\\repos\\rento\\Controllers\\VehicleModels\\Dto\\GetVehicleModelDto.cs",
+              "RelativeToolTip": "Controllers\\VehicleModels\\Dto\\GetVehicleModelDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-01T01:56:57.415Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "VehicleModelController.cs",
+              "DocumentMoniker": "C:\\Users\\Mousab\\source\\repos\\rento\\Controllers\\VehicleModels\\VehicleModelController.cs",
+              "RelativeDocumentMoniker": "Controllers\\VehicleModels\\VehicleModelController.cs",
+              "ToolTip": "C:\\Users\\Mousab\\source\\repos\\rento\\Controllers\\VehicleModels\\VehicleModelController.cs",
+              "RelativeToolTip": "Controllers\\VehicleModels\\VehicleModelController.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAawEMAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-01T01:56:42.827Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "VehicleManufacturerController.cs",
+              "DocumentMoniker": "C:\\Users\\Mousab\\source\\repos\\rento\\Controllers\\VehicleManufacturers\\VehicleManufacturerController.cs",
+              "RelativeDocumentMoniker": "Controllers\\VehicleManufacturers\\VehicleManufacturerController.cs",
+              "ToolTip": "C:\\Users\\Mousab\\source\\repos\\rento\\Controllers\\VehicleManufacturers\\VehicleManufacturerController.cs",
+              "RelativeToolTip": "Controllers\\VehicleManufacturers\\VehicleManufacturerController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwCkAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T21:10:59.681Z"
             }
           ]
         }

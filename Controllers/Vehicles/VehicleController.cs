@@ -32,7 +32,7 @@ namespace Rento.Controllers.Vehicles
             _VehicleModelrepository = vehicleModelrepository;
         }
 
-        [HttpGet("Get")]
+        [HttpGet("{id}")]
         public async Task<GetVehicleDto> GetVehicle(int id)
         {
             if (id < 0) throw new Exception ("Invalid branch Id");
@@ -43,7 +43,7 @@ namespace Rento.Controllers.Vehicles
             return _mapper.Map<GetVehicleDto>(vehicle);
         }
 
-        [HttpGet("GetAll")]
+        [HttpGet]
         public async Task<List<GetVehicleDto>> GetAllVehicle()
         {
             var vehicle = await _vehicleRepository.GetAll().ToListAsync();
@@ -53,7 +53,7 @@ namespace Rento.Controllers.Vehicles
             return _mapper.Map<List<GetVehicleDto>>(vehicle);
         }
 
-        [HttpDelete("Delete")]
+        [HttpDelete("{id}")]
         public async Task DeleteVehicle(int id)
         {
             if (id <= 0) throw new Exception
@@ -67,7 +67,7 @@ namespace Rento.Controllers.Vehicles
             _vehicleRepository.Save();
         }
 
-        [HttpPut("Update")]
+        [HttpPut]
         public async Task UpdateVehicle(UpdateVehicleDto updateVehicle)
         {
             var isValidVehicle = await _vehicleRepository.AnyAsync(d=> d.Id== updateVehicle.Id);
@@ -80,7 +80,7 @@ namespace Rento.Controllers.Vehicles
             _vehicleRepository.Save();
         }
 
-        [HttpPost("Create")]
+        [HttpPost]
         public async Task CreateVehicle(CreateVehicleDto vehicleDto)
         {
             var isValidBranch = await _Branchrepository.AnyAsync(b => b.Id == vehicleDto.BranchId);

@@ -20,12 +20,13 @@ namespace Rento.Entities.Entities
             SetModelName(name);
             SetCategory(vehicleCategorieId);
             SetVehicleModelYear(vehicleModelYear);
+            IsActive = true;
         }
 
         private void SetVehicleModelYear(int vehicleModelYear)
         {
-            if (vehicleModelYear < 1950) throw new Exception("Invalid vehicle Model Year");
-            VehicleCategorieId=vehicleModelYear;
+            //if (vehicleModelYear < 1950) throw new Exception("Invalid vehicle Model Year");
+            VehicleModelYear = vehicleModelYear;
         }
 
         private void SetCategory(int vehicleCategorieId)

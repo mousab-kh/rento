@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yIGpEi/dTEM=",
+  "dgSpecHash": "SAWcB8+gg/Y=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mousab\\source\\repos\\Rento\\Rento.csproj",
+  "projectFilePath": "C:\\Users\\Mousab\\source\\repos\\rento\\Rento.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mousab\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Mousab\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

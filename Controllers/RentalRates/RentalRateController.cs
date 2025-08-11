@@ -31,7 +31,7 @@ namespace Rento.Controllers.RentalRates
             _vehicleCategorierepository = vehicleCategorierepository;
         }
 
-        [HttpGet("Get")]
+        [HttpGet("{id}")]
         public async Task<GetRentalRateDto> GetRentalRate(int id)
         {
             if (id <= 0) throw new Exception("Invalid RentalRateSchema");
@@ -40,7 +40,7 @@ namespace Rento.Controllers.RentalRates
             return _mapper.Map<GetRentalRateDto>(rentalRate);
         }
 
-        [HttpGet("GetAll")]
+        [HttpGet]
         public async Task<List<GetRentalRateDto>> GetAllRentalRates()
         {
             var rentalRate = await _repositoryRentalRate.GetAll().ToListAsync();
@@ -48,7 +48,7 @@ namespace Rento.Controllers.RentalRates
             return _mapper.Map<List<GetRentalRateDto>>(rentalRate);
         }
 
-        [HttpDelete("Delete")]
+        [HttpDelete("{id}")]
         public async Task DeleteRentalRate(int id)
         {
             if (id <= 0) throw new Exception("Invalid RentalRateSchema");
@@ -59,7 +59,7 @@ namespace Rento.Controllers.RentalRates
 
         }
 
-        [HttpPut("Update")]
+        [HttpPut]
         public async Task UpdateRentalRate(
             UpdateRentalRateDto updateRentalRateDto)
         {
@@ -72,7 +72,7 @@ namespace Rento.Controllers.RentalRates
             _repositoryRentalRate.Save();
         }
 
-        [HttpPost("Create")]
+        [HttpPost]
         public async Task CreateRentalRate(
             CreateRentalRateDto createRentalRateDto)
         {

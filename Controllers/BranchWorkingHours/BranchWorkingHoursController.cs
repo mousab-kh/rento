@@ -5,13 +5,12 @@ using Rento.Controllers.BranchWorkingHours.Dto;
 using Rento.Entities.Entities;
 using Rento.Entities.ValueObjects;
 using Rento.Infrastructure.Interfaces;
-using System.Threading.Tasks;
 
 
 namespace Rento.Controllers.BranchWorkingHours
 {
     [ApiController]
-    [Route("BranchWorkingHours")]
+    [Route("Branch/{branchid}/BranchWorkingHour")]
     public class BranchWorkingHoursController : ControllerBase
     {
         private IRepository<BranchWorkingHour> _branchWorkingHourRepository;
@@ -33,7 +32,7 @@ namespace Rento.Controllers.BranchWorkingHours
         {
             if (input == null)
                 throw new Exception("Invalid input");
-            if (input.BranchId<0)
+            if (input.BranchId < 0)
                 throw new Exception("Invalid input");
             if (await _branchRepository.GetEntityAsync(input.BranchId) == null)
                 throw new Exception("Invalid branch id");
@@ -50,7 +49,7 @@ namespace Rento.Controllers.BranchWorkingHours
         }
 
         [HttpGet("{id}")]
-        public async Task<GetBranchWorkingHourOutputDto> Get(int id)
+        public async Task<GetBranchWorkingHourOutputDto> GetBranchWorkingHour([FromRoute] int id)
         {
             if (id < 0)
                 throw new Exception("Invalid id");
@@ -62,13 +61,17 @@ namespace Rento.Controllers.BranchWorkingHours
             return _mapper.Map<GetBranchWorkingHourOutputDto>(branchWorkingHour);
         }
 
+
         [HttpGet]
-        public async Task<List<GetBranchWorkingHourOutputDto>> GetAll()
+        public async Task<List<GetBranchWorkingHourOutputDto>> GetAll([FromRoute] int branchid)
         {
-            var branchWorkingHoures = await _branchWorkingHourRepository.GetAll().ToListAsync();
+            var branchWorkingHoures = await _branchWorkingHourRepository.GetAll()
+                .Where(branchWorkingHour=> branchWorkingHour.BranchId== branchid)
+                .ToListAsync();
 
             return _mapper.Map<List<GetBranchWorkingHourOutputDto>>(branchWorkingHoures);
         }
+
 
         [HttpPut]
         public async Task Update(UpdateBranchWorkingHourInputDto input)
@@ -82,6 +85,7 @@ namespace Rento.Controllers.BranchWorkingHours
 
             var workingHoursInterval = _mapper
                 .Map<List<WorkingHourIntervalValueObject>>(input.Intervals);
+
             branchWorkingHour.Update(
                 input.StartTime, 
                 input.EndTime, 
@@ -93,8 +97,8 @@ namespace Rento.Controllers.BranchWorkingHours
             _branchWorkingHourRepository.Save();
         }
 
-        [HttpDelete]
-        public async Task DeleteBranch(int id)
+        [HttpDelete("{id}")]
+        public async Task DeleteBranch([FromRoute] int id)
         {
             var branchWorkingHourentity = await _branchWorkingHourRepository.GetEntityAsync(id);
             if (branchWorkingHourentity == null)
