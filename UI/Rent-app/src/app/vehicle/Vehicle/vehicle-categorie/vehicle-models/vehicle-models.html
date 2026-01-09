@@ -1,0 +1,44 @@
+<p class="table-title">📋 موديلات</p>
+<h1 *ngIf="VehicleModels.length>0">{{ VehicleModels[0].vehicleCategorieId }} لكتالوج رقم:</h1>
+<table class="vehicle-models-table">
+  <thead>
+    <tr>
+      <th>الرقم</th>
+      <th>الاسم</th>
+      <th>الحالة</th>
+      <th>موديل السنة</th>
+      <th>معالجة</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let VehicleModel of VehicleModels">
+      <td>{{ VehicleModel.id }}</td>
+
+      <td *ngIf="updateVehicleModelsid!==VehicleModel.id">{{ VehicleModel.name }}</td>
+      <td *ngIf="updateVehicleModelsid!==VehicleModel.id">{{ VehicleModel.isActive ? 'نشط' : 'غير نشط' }}</td>
+      <td *ngIf="updateVehicleModelsid!==VehicleModel.id">{{ VehicleModel.vehicleModelYear }}</td>
+
+      <td>
+        <button *ngIf="updateVehicleModelsid!==VehicleModel.id" class="edit-btn" (click)="editModel(VehicleModel)">تعديل</button>
+        <button *ngIf="updateVehicleModelsid!==VehicleModel.id" class="delete-btn" (click)="deleteModel(VehicleModel)">حذف</button>
+      </td>
+
+      <td *ngIf="updateVehicleModelsid===VehicleModel.id">
+        <input type="text" [(ngModel)]="VehicleModel.name" placeholder="اسم الموديل" />
+      </td>
+      <td *ngIf="updateVehicleModelsid===VehicleModel.id">
+        <select [(ngModel)]="VehicleModel.isActive">
+          <option [ngValue]="true">نشط</option>
+          <option [ngValue]="false">غير نشط</option>
+        </select>
+      </td>
+      <td *ngIf="updateVehicleModelsid===VehicleModel.id">
+        <input type="number" [(ngModel)]="VehicleModel.vehicleModelYear" placeholder="موديل السنة"/> 
+      </td>
+      <td *ngIf="updateVehicleModelsid===VehicleModel.id">
+        <button (click)="updateVehicleModel(VehicleModel)">حفظ</button>
+      </td>
+
+    </tr>
+  </tbody>
+</table>

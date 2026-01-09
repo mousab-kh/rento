@@ -1,0 +1,111 @@
+body{
+  direction:rtl;
+  text-align: right;
+}
+.table-container {
+  margin: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* تنسيق العنوان */
+h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* تنسيق الجدول */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* تنسيق الرؤوس */
+th {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid #ddd;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* تنسيق الخلايا */
+td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+/* تحسين تنسيق الصفوف */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #e0e0e0;
+  cursor: pointer;
+}
+
+/* تنسيق حالة القسم الفعال */
+.active {
+  color: #28a745;
+  font-weight: bold;
+}
+
+/* تنسيق حالة القسم غير الفعال */
+.inactive {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+/* تنسيق حدود الخلايا في الجدول */
+td, th {
+  border: 1px solid #ddd;
+}
+
+/* إضافة تأثيرات عند التمرير على الصف */
+tr:hover td {
+  background-color: #e0f7fa;
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.2s ease;
+  color: white;
+  margin: 5px;
+}
+
+.create-button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.button-create {
+  background-color: #28a745; /* أخضر */
+}
+
+.button-edit {
+  background-color: #007bff; /* أزرق */
+}
+
+.button:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0.9;
+}
+
+.button:active {
+  transform: scale(0.97);
+}

@@ -1,0 +1,105 @@
+<body dir="rtl">
+  <h3 class="branch-title">🏢 القسم رقم: {{ branchid }}</h3>
+
+  <ng-container *ngIf="BranchWorkingHours && BranchWorkingHours.length > 0; else noData">
+    <div *ngFor="let BranchWorkingHour of BranchWorkingHours" class="branch-card">
+      <h3 class="branch-title">🏢 توقيت الاعمال رقم: {{ BranchWorkingHour.id }}</h3>
+      <table class="interval-table">
+        <thead>
+          <tr>
+            <th>الحالة</th>
+            <th>من</th>
+            <th>إلى</th>
+            <th>#</th>
+            <th>البداية</th>
+            <th>الانتهاء</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- السطر الأساسي لكل فرع -->
+          <tr>
+            <td>
+              <label>
+                <input type="radio" name="statustrue{{BranchWorkingHour.id}}" [(ngModel)]="BranchWorkingHour.isActive"
+                  [value]="true" />
+                ✅ فعال
+              </label>
+              <label>
+                <input type="radio" name="statusfalse{{BranchWorkingHour.id}}" [(ngModel)]="BranchWorkingHour.isActive"
+                  [value]="false" />
+                ❌ غير فعال
+              </label>
+            </td>
+
+            <td>
+              <input 
+              type="date" 
+              [ngModel]="BranchWorkingHour.startTime | dateFormat"
+              (ngModelChange)="onstartDateChange($event, BranchWorkingHour) "
+              name="startDate{{BranchWorkingHour.id}}" />
+              <span style="padding-left: 10px;"></span>
+              <input type="time" [ngModel]="BranchWorkingHour.startTime | timeFormat"
+                (ngModelChange)="onstartTimeChange($event, BranchWorkingHour)"
+                name="startTime{{BranchWorkingHour.id}}" />
+            </td>
+
+            <td>
+              <input type="date" [ngModel]="BranchWorkingHour.endTime | dateFormat"
+                (ngModelChange)="onendDateChange($event, BranchWorkingHour)" name="endDate{{BranchWorkingHour.id}}" />
+              <span style="padding-left: 10px;"></span>
+              <input type="time" [ngModel]="BranchWorkingHour.endTime | timeFormat"
+                (ngModelChange)="onendTimeChange($event, BranchWorkingHour)" name="endTime{{BranchWorkingHour.id}}" />
+            </td>
+
+            <ng-container
+              *ngIf="BranchWorkingHour?.intervals && BranchWorkingHour.intervals.length > 0; else emptyCells">
+              <td>1</td>
+              <td>
+                <input type="time" [ngModel]="BranchWorkingHour.intervals[0].start | numberTimeFormat"
+                  (ngModelChange)="onintervalstartChange($event,BranchWorkingHour.intervals[0])"
+                  name="intervalStart{{BranchWorkingHour.branchId}}/0" />
+              </td>
+              <td>
+                <input type="time" [ngModel]="BranchWorkingHour.intervals[0].end | numberTimeFormat"
+                  (ngModelChange)="onintervalendChange($event,BranchWorkingHour.intervals[0])"
+                  name="intervalEnd{{BranchWorkingHour.branchId}}" />
+              </td>
+            </ng-container>
+
+            <ng-template #emptyCells>
+              <td></td>
+              <td></td>
+              <td></td>
+            </ng-template>
+          </tr>
+
+
+          <tr *ngFor="let interval of BranchWorkingHour.intervals.slice(1); let i = index">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>{{ i + 2 }}</td>
+            <td>
+              <input type="time" [ngModel]="interval.start | numberTimeFormat"
+                (ngModelChange)="onintervalstartChange($event,interval)"
+                name="intervalStart{{BranchWorkingHour.branchId}}_{{i}}" />
+            </td>
+            <td>
+              <input type="time" [ngModel]="interval.end | numberTimeFormat"
+                (ngModelChange)="onintervalendChange($event,interval)"
+                name="intervalEnd{{BranchWorkingHour.branchId}}_{{i}}" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- <pre>{{ BranchWorkingHour | json }}</pre> -->
+    </div>
+
+    <button (click)="onSaveAll()">💾 حفظ كل التعديلات</button>
+  </ng-container>
+
+  <ng-template #noData>
+    <p>لا توجد بيانات لعرضها.</p>
+  </ng-template>
+
+</body>

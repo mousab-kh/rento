@@ -1,0 +1,35 @@
+
+<div class="table-container">
+  <h2>قائمة الأقسام</h2>
+  <div class="create-button-container">
+    <button class="button button-create" (click)="goTocreatePage()">انشاء قسم جديد</button>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>رقم القسم</th>
+        <th>اسم القسم</th>
+        <th>مكان القسم الرقمي</th>
+        <th>حالة القسم</th>
+        <th>معالجة قسم</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let branch of branches$ | async">
+        <td>{{ branch.id }}</td>
+        <td>{{ branch.name }}</td>
+        <td>{{branch.coordinatesLatitude}} x {{branch.coordinatesLongitude}}</td>
+        <td [ngClass]="branch.isActive ? 'active' : 'inactive'">{{ branch.isActive ? 'فعال' : 'غير فعال' }}</td>
+        <td>
+          <button class="button button-edit" (click)="goToUpdatePage(branch.id)"> تعديل</button>
+          <div>
+            <button class="button button-edit" (click)="Deletebranch(branch.id)">🗑️</button>
+          </div>
+          <div>
+            <button class="button button-edit" (click)="goToBranchWorkingHoursPage(branch.id)">تفاصيل الاوقات</button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

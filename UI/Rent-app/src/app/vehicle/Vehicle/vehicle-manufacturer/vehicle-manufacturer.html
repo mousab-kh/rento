@@ -1,0 +1,58 @@
+<p class="title">عرض المصنعين</p>
+
+<table class="manufacturer-table">
+  <thead>
+    <tr>
+      <th>الرقم</th>
+      <th>الاسم</th>
+      <th>الحالة</th>
+      <th>المعالجة</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let Manufacturer of VehicleManufacturer">
+      <td>{{ Manufacturer.id }}</td>
+
+      <!-- عرض فقط -->
+      <td *ngIf="UpdateVehicleManufacturerid!==Manufacturer.id">{{ Manufacturer.name }}</td>
+      <td *ngIf="UpdateVehicleManufacturerid!==Manufacturer.id">
+        {{ Manufacturer.isActive ? 'نشط' : 'غير نشط' }}
+      </td>
+      <td *ngIf="UpdateVehicleManufacturerid!==Manufacturer.id">
+        <button class="btn delete" (click)="deleteManufacturer(Manufacturer.id)">حذف</button>
+        <button class="btn edit" (click)="UpdateVehicleManufacturer(Manufacturer)">تعديل</button>
+      </td>
+
+      <!-- تعديل -->
+      <td *ngIf="UpdateVehicleManufacturerid===Manufacturer.id">
+        <input [(ngModel)]="Manufacturer.name" placeholder="اسم المصنع" />
+      </td>
+      <td *ngIf="UpdateVehicleManufacturerid===Manufacturer.id">
+        <select [(ngModel)]="Manufacturer.isActive">
+          <option [ngValue]="true">نشط</option>
+          <option [ngValue]="false">غير نشط</option>
+        </select>
+      </td>
+      <td *ngIf="UpdateVehicleManufacturerid===Manufacturer.id">
+        <button class="btn save" (click)="saveManufacturer(Manufacturer)">حفظ</button>
+      </td>
+    </tr>
+
+    <ng-container *ngIf="iscreateManufacturer && vehicleCreateManufacturer">
+      <tr>
+        <td></td>
+        <td><input [(ngModel)]="vehicleCreateManufacturer.name" placeholder="اسم المصنع" /></td>
+        <td>
+        </td>
+        <td>
+          <button class="btn save" (click)="saveCreateManufacturer(vehicleCreateManufacturer)">حفظ</button>
+        </td>
+      </tr>
+
+    </ng-container>
+
+
+  </tbody>
+</table>
+
+<button class="btn create" (click)="OnCreateManufacturer()">إنشاء</button>

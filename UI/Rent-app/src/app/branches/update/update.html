@@ -1,0 +1,28 @@
+<h2>تعديل بيانات القسم</h2>
+
+<div class="simple-form">
+  <label>
+    اسم القسم:
+    <input type="text" [(ngModel)]="BranchUpdate.name">
+  </label>
+
+  <label>
+    خطوط العرض (Latitude):
+    <input type="number" [(ngModel)]="BranchUpdate.coordinatesLatitude">
+  </label>
+
+  <label>
+    خطوط الطول (Longitude):
+    <input type="number" [(ngModel)]="BranchUpdate.coordinatesLongitude">
+  </label>
+
+  <label>
+    الحالة:
+    <select [(ngModel)]="BranchUpdate.isActive">
+      <option value="true">فعال</option>
+      <option value="false">غير فعال</option>
+    </select>
+  </label> 
+
+<button (click)="saveChanges(BranchUpdate)">موافقة</button>
+</div> 
